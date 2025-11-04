@@ -1,0 +1,4 @@
+services:
+  twig.loader.filesystem:
+    calls:
+      - [ addPath, ['themes/custom/bootstraplak_sass/templates', 'bootstraplak_sass'] ]

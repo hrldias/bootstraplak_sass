@@ -1,0 +1,418 @@
+/*
+Theme Name: Bootstrap 4 Sass
+Description: Bootstrap 4 with Sass 
+test compiled
+*/
+
+// import files
+@import "import"; 
+
+
+
+/* GENERAL STYLES
+-------------------------------------------------*/
+
+body {
+    background: $body-bg;   
+}
+
+
+/* COLORS
+--------------------------------------------------*/
+ 
+a {
+    color: $accent-shade;
+}
+
+.bg-inverse {
+    background: $primary-shade !important;
+}
+
+
+.site-name-slogan a {
+    text-decoration: none;
+} 
+
+.card-group img {
+    margin: 0;
+    width: 100%;
+    height: auto;
+}
+
+.card-group .field--type-image {
+    margin: 0
+}
+
+.slick {
+    width: 100%;
+}
+
+.slick>div {
+    margin: 0 15px;
+}  
+
+//New rules goes here. 
+.btn{
+    &:hover{
+        background-color: tint-color($primary, 20%);
+    }
+}
+
+.header-main{
+    background-color: $white;
+    box-shadow: 0px 1px 5px $primary;
+}
+
+.navbar-brand{
+    img{
+        height: 35px; 
+    }
+}
+
+.menu-icon-text{
+    display:none;
+}
+
+.navbar-toggler {
+    &:focus{
+      box-shadow: none;
+    }
+    padding: 2px 5px 2px 5px ;
+    border-color: $primary;
+    margin-right: 3px;
+  }
+
+.navbar-toggler-icon {
+    width: 1.1em;
+    height: 1.1em;
+}
+
+.navbar-brand{
+    margin-right: auto ;
+    margin-left: auto ;
+}
+
+#block-bootstrap-sass-languageswitcher {
+    font-size: .8rem;
+    margin-right: 2px;
+    .nav-link{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+   // display: none;
+  }
+  #block-bootstrap-sass-languageswitcher-2{
+    background-color: #c5e4ff;
+  }
+
+  #block-bootstrap-sass-offcanvessidebarmenu{
+    margin-top: 20px;
+  }
+
+.language-link.is-active{
+    border-bottom: 3px solid ; 
+  }
+
+//Off Canves menu
+.offcanvas.offcanvas-start{
+    width: 260px;
+}
+
+.offcanvas-logout-btn{
+    font-size: large;
+    text-align: center;
+    background-color: #1b14642b;;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+
+#main.container{
+    margin-top: 10px;
+    min-height: 600px;
+}
+
+.region-header-form{
+    display: flex;
+    align-items: center;
+}
+
+.register-button{
+  //margin-top: 3px;
+  //font-size: .8rem;
+  margin-left: 9px;
+  background-color: $primary; 
+  border-radius: 2rem;
+  color: white;
+  padding: 6px 18px;
+  &:hover{
+    background-color: rgba(27,20,100,.9);
+  }
+}
+.nav-link--user-login, .nav-link--si-user-login {
+    margin-left: 5px;
+    background-color: $primary; 
+    border-radius: 2rem;
+    color: white;
+    padding: 5px 12px;
+    &:hover{
+      background-color: rgba(27,20,100,.9);
+      color: #ffffff;
+    }
+}
+
+//user Awater related styling
+.usernm.dropdown-toggle{
+   &::before{
+    display: none !important;
+   } 
+}
+
+.usernm{
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: rgb(27, 20, 100); /* your site color */
+  color: #fff;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover{
+    opacity: 0.85;
+    cursor: pointer;
+    box-shadow: 0 0 0 2px rgba(27,20,100,0.25);
+  }
+}
+
+.dropstart .dropdown-menu[data-bs-popper] {
+    top: auto !important;
+    right: -15px !important;
+    left: auto !important;
+    margin-top: 10px !important;
+}
+
+//Footer styles
+.site-footer {
+    background: rgb(20, 15, 70) !important;
+    margin-top: 4rem;
+    color:#E0E0E0; 
+    padding: 3rem 0;
+}
+
+.footer-second-title, .footer-third-title, .footer-third-title2{
+    color: #F1F1F1;
+    margin-top: 2rem;
+}
+
+#block-bootstrap-sass-usefullinksfootermenu{
+  ul li{
+    width: 100%;
+    a{
+        padding: 0%;
+        color: #E0E0E0;
+        padding-left: 5px;
+        padding-top: 6px;
+        &:hover{
+         color: #A3B1FF;
+        }
+    }
+  }
+}
+
+.footer4-link{
+    padding: 0%;
+    color: #E0E0E0;
+    padding-left: 5px;
+    padding-top: 6px;
+    &:hover{
+     color: #A3B1FF;
+    }
+}
+
+.fs-wrapper{
+    display: inline-flex;
+    list-style: none;
+    color: rgb(20, 15, 70);
+    padding-left: 0;
+    .fs-icon{
+        position: relative;
+        background: #ffffff;
+        border-radius: 50%;
+        padding: 15px;
+        margin: 10px;
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: all 0.2 scubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+    .facebook{
+        margin-left: 0;
+    }   
+    .facebook:hover{
+        background: #1877F2;
+        color: #ffffff;
+    }
+    .twitter:hover{
+        background: #1DA1F2;
+        color: #ffffff;
+    }
+    .instagram:hover{
+        background: #E4405F;
+        color: #ffffff;
+    }
+}
+
+.copyright-section {
+    color: rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: .5rem;
+  }
+
+//Login form styles
+#auth_box2{
+    max-width: 340px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: auto;
+    margin-top: auto;
+    padding: 20px;
+    padding-top: 10px;
+    margin-top: 2rem;
+      button{ 
+        width: 100%;
+        border-radius: 20px;
+    }
+    .form-control{
+        &:focus{
+            box-shadow: none;
+        } 
+    }
+    .password-field, .password-confirm{
+        width: 100%;
+    }
+    .password-confirm-message{
+        display: none;
+    }
+}
+
+//Hero section stylings goes here
+.hero-section {
+    height: 500px;
+    background-image: url(/sites/default/files/heroimage.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: 88% 50%;
+  }
+  
+  .hero-contect{ 
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.684);
+    #hero-title{
+      font-size: x-large;
+    }
+    #hero-subtitle{
+    font-weight: 500;
+    }
+  }
+
+  #hero-button1{
+    background-color: rgb(27, 20, 100);
+    border: 1px solid rgb(27, 20, 100);
+    padding: 6px 20px;
+    font-weight: 600;
+    margin-right: 6px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    color: white;
+  }
+
+  #hero-button2{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(27, 20, 100);
+    font-weight: 600;
+    padding: 6px 20px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    color: rgb(27, 20, 100);
+  }
+
+
+//screens 576px and highre
+@include media-breakpoint-up(sm){
+    #postad-button{
+        margin-top: 0px;
+        font-size: 1rem;
+    }
+    .navbar-brand{
+        img{
+            height: 45px;
+        }
+    }
+    .menu-icon-text{
+        display:inline-block;
+    }
+
+    #block-bootstrap-sass-languageswitcher{
+        display: inline-block;
+        margin-right: 25px;
+    }
+} 
+
+
+
+//screens 768px and highre
+@include media-breakpoint-up(md){
+    .navbar-brand{
+        img{
+            height: 50px;
+        }
+    }
+    .hero-contect{
+        width:50%;
+        margin-left: 3rem;
+    }
+} 
+
+//screens 992px and highre
+@include media-breakpoint-up(lg){
+    .hero-section {
+        height: 550px;
+      }
+      .hero-contect{
+        width: 40%;
+        margin-left: 4rem;
+      }
+    .navbar-brand{
+        img{
+            height: 60px; 
+        }
+    }
+    .menu-icon-text{
+        display:none;
+    }
+    .footer-second-title, .footer-third-title{
+        margin-top: 0;
+    }
+    .region-footer-second {
+        padding-left: 5rem;
+      }
+
+    .dropdown:hover > .dropdown-menu{
+        display:block;
+    }
+    .dropdown-menu{
+        margin-top: 0;
+    }
+
+      
+}  
