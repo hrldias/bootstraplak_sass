@@ -115,3 +115,4 @@ templates/page--user--login.html.twigZone.Identifier
 templates/page--user--password.html.twigZone.Identifier
 templates/page--user--register.html.twigZone.Identifier
 templates/page--user--reset.html.twigZone.Identifier
+scss/style.css.map

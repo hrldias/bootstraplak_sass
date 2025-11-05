@@ -23,7 +23,7 @@
   $(document).ready(function () {
     // Only apply hover on desktop
     if (window.matchMedia("(min-width: 992px)").matches) {
-      $('.dropdown').hover(
+      $('.dropstart').hover(
         function () {
           $(this).addClass('show');
           $(this).find('.dropdown-menu').addClass('show');

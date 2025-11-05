@@ -14178,7 +14178,7 @@ a {
 
 .region-header-form {
   display: flex;
-  align-items: center; 
+  align-items: center;
 }
 
 .register-button {
@@ -14226,7 +14226,7 @@ a {
 }
 
 .dropstart .dropdown-menu[data-bs-popper] {
-  top: auto !important;
+  top: 31px !important;
   right: -15px !important;
   left: auto !important;
   margin-top: 10px !important;
