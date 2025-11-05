@@ -14111,6 +14111,10 @@ a {
   box-shadow: 0px 1px 5px rgb(27, 20, 100);
 }
 
+.sticky-top {
+  z-index: 10 !important;
+}
+
 .navbar-brand img {
   height: 35px;
 }

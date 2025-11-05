@@ -63,6 +63,10 @@ a {
     box-shadow: 0px 1px 5px $primary;
 }
 
+.sticky-top {
+    z-index: 10 !important;
+}
+
 .navbar-brand{
     img{
         height: 35px; 
