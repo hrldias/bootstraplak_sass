@@ -14167,6 +14167,21 @@ a {
   width: 260px;
 }
 
+.lak-offcnvs .clearfix {
+  flex-direction: column;
+}
+
+.offcanvas .btn-close {
+  margin-right: -30px;
+  margin-top: 0px;
+  background-color: white;
+  border: 2px solid rgb(27, 20, 100);
+  border-radius: 20px;
+  width: 16px;
+  height: 16px;
+  opacity: 100%;
+}
+
 .offcanvas-logout-btn {
   font-size: large;
   text-align: center;
