@@ -14366,6 +14366,7 @@ a {
   margin-top: auto;
   margin-bottom: auto;
   text-align: center;
+  color: rgb(27, 20, 100);
   width: 100%;
   background-color: rgba(255, 255, 255, 0.684);
 }
@@ -14376,25 +14377,37 @@ a {
   font-weight: 500;
 }
 
-#hero-button1 {
-  background-color: rgb(27, 20, 100);
-  border: 1px solid rgb(27, 20, 100);
+.hero-adbtn {
+  background-color: rgba(244, 244, 250, 0.5);
+  border: 0px solid rgb(27, 20, 100);
   padding: 6px 20px;
   font-weight: 600;
-  margin-right: 6px;
+  box-shadow: 0px 0px 8px rgb(140, 133, 214);
   margin-bottom: 20px;
-  border-radius: 25px;
-  color: white;
+  border-radius: 10px;
+  color: rgb(27, 20, 100);
+  width: 175px;
+}
+.hero-adbtn:hover {
+  box-shadow: 1px 1px 10px;
 }
 
-#hero-button2 {
-  background-color: rgb(255, 255, 255);
-  border: 1px solid rgb(27, 20, 100);
-  font-weight: 600;
-  padding: 6px 20px;
-  margin-bottom: 20px;
-  border-radius: 25px;
-  color: rgb(27, 20, 100);
+.hero-girl-logo {
+  background-image: url(/sites/default/files/girl-icon.png);
+  height: 100px;
+  width: 90px;
+  background-size: 60px 79px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hero-boy-logo {
+  background-image: url(/sites/default/files/boy-icon.png);
+  height: 100px;
+  width: 90px;
+  background-size: 60px 79px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 @media (min-width: 576px) {
