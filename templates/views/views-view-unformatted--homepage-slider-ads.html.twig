@@ -1,0 +1,15 @@
+
+{{ attach_library('bootstrap_sass/swiper') }}
+
+<div class="swiper">
+  <div class="swiper-wrapper">
+
+   {% for row in rows %}
+    {{ row.content }}
+   {% endfor %}
+
+  </div>
+</div>
+<div class="swiper-pagination"></div> 
+
+{{ attach_library('bootstrap_sass/swiper-init') }}

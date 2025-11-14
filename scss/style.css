@@ -2152,7 +2152,6 @@ progress {
 }
 .table > :not(caption) > * > * {
   padding: 0.5rem 0.5rem;
-  color: var(--bs-table-color-state, var(--bs-table-color-type, var(--bs-table-color)));
   background-color: var(--bs-table-bg);
   border-bottom-width: var(--bs-border-width);
   box-shadow: inset 0 0 0 9999px var(--bs-table-bg-state, var(--bs-table-bg-type, var(--bs-table-accent-bg)));
@@ -14112,7 +14111,7 @@ a {
 }
 
 .sticky-top {
-  z-index: 10 !important;
+  z-index: 11 !important;
 }
 
 .navbar-brand img {
@@ -14457,6 +14456,56 @@ a {
 .trust-ico {
   min-height: 60px;
   align-content: center;
+}
+
+.swiper {
+  height: 300px;
+}
+
+.swiper-slide {
+  background-color: rgb(27, 20, 100);
+  color: aliceblue;
+  border-radius: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 13px;
+  padding-bottom: 20px;
+  font-size: smaller;
+  border: 1px solid;
+}
+
+.sld-image {
+  width: 26%;
+}
+.sld-image img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid white;
+  border-radius: 8px;
+}
+
+.sld-btn-profile {
+  position: absolute;
+  right: 20px;
+  bottom: 18px;
+  background: #ffffff;
+  border-radius: 20px;
+  color: rgb(27, 20, 100);
+  transition: 0.2s ease;
+}
+.sld-btn-profile:hover {
+  scale: 1.05;
+  cursor: pointer;
+  box-shadow: 1px 1px 3px rgba(165, 161, 201, 0.914);
+}
+
+.sld-verify-pil {
+  font-size: smaller;
+}
+
+.swiper-pagination {
+  position: relative !important;
+  margin-top: 15px;
 }
 
 .card-step {

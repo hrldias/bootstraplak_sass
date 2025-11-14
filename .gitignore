@@ -117,3 +117,7 @@ templates/page--user--register.html.twigZone.Identifier
 templates/page--user--reset.html.twigZone.Identifier
 scss/style.css.map
 scss/style.css.map
+js/swiper-bundle.min.jsZone.Identifier
+css/swiper-bundle.min.cssZone.Identifier
+swiper/swiper-bundle.min.cssZone.Identifier
+swiper/swiper-bundle.min.jsZone.Identifier

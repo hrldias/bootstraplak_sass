@@ -64,7 +64,7 @@ a {
 }
 
 .sticky-top {
-    z-index: 10 !important;
+    z-index: 11 !important;
 }
 
 .navbar-brand{
@@ -432,6 +432,51 @@ a {
   align-content: center;
 }
 
+// <----- Swiper slider styles goes here ------->
+.swiper {
+  height: 300px;
+}
+.swiper-slide{
+ background-color: rgb(27,20,100); 
+ color: aliceblue;
+ border-radius: 25px;
+ padding-left: 10px;
+ padding-right: 10px;
+ padding-top: 13px;
+ padding-bottom: 20px;
+ font-size: smaller; 
+ border: 1px solid ;
+}
+.sld-image{
+  width: 26%;
+  img{
+    max-width: 100%;
+    height: auto;
+    border: 2px solid white;
+    border-radius: 8px;
+  }
+} 
+.sld-btn-profile{
+  position: absolute;
+  right: 20px;
+  bottom: 18px;
+  background: #ffffff;
+  border-radius: 20px;
+  color: rgb(27,20,100);
+  transition: .2s ease;
+  &:hover{
+    scale: 1.05;
+    cursor: pointer;
+    box-shadow: 1px 1px 3px rgba(165, 161, 201, 0.914);
+  }
+}
+.sld-verify-pil {
+  font-size: smaller;
+}
+.swiper-pagination{
+  position: relative !important; 
+  margin-top: 15px;
+} 
 
 // <----- How It works steps ------->
 .card-step{
