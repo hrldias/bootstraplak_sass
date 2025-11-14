@@ -21,6 +21,54 @@
  * @see betterlogin_preprocess_betterlogin()
  */
 #}
+{% block head %}
+      {% if page.secondary_menu or page.top_header or page.top_header_form %}
+        <nav{{ navbar_top_attributes }}>
+          {% if container_navbar %}
+          <div class="container">
+          {% endif %}
+            {{ page.secondary_menu }}
+            {{ page.top_header }}
+            {% if page.top_header_form %}
+              <div class="form-inline navbar-form ms-auto">
+                {{ page.top_header_form }}
+              </div>
+            {% endif %}
+          {% if container_navbar %}
+          </div>
+          {% endif %}
+        </nav>
+      {% endif %}
+
+      {% if page.header or page.primary_menu or page.header_form %}
+        <header id="header" class="header sticky-top header-main" role="banner" aria-label="{{ 'Site header'|t}}">
+          <nav class="navbar sticky-top navbar-expand-lg navbar-light">
+            <div class="container-lg">
+               <div id="knavbar-togler">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <span class="menu-icon-text">{{ page.menu_togglet_text }}</span>
+               </div>
+              {{ page.header }}
+
+              {% if page.primary_menu %}
+               <div class="collapse navbar-collapse justify-content-center" id="navbarNav"> 
+                  {{ page.primary_menu }}
+               </div>
+              {% endif %}
+
+              
+              {% if page.header_form %}
+                <div class="form-inline navbar-form ms-auto">
+                  {{ page.header_form }}
+                </div>
+              {% endif %}
+            </div>
+          </nav>
+        </header>
+      {% endif %}
+{% endblock %}
 <div id="auth_box" class="reset">
   {% if logo %}
     <div id="top_part">
