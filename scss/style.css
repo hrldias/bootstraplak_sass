@@ -14508,6 +14508,12 @@ a {
   box-shadow: 1px 1px 3px rgba(165, 161, 201, 0.914);
 }
 
+.sld-crd-bttomset {
+  position: absolute;
+  bottom: 15px;
+  width: 95%;
+}
+
 .sld-verify-pil {
   font-size: smaller;
 }
