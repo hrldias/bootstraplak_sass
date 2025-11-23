@@ -7,7 +7,6 @@ base theme: bootstrap
 
 libraries:
   - bootstrap_sass/global-styling
-  - bootstrap_sass/login-model-popup
 libraries-override:
   bootstrap/global-styling: false
 regions:
