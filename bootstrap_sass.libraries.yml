@@ -4,7 +4,7 @@ global-styling:
     
     js/bootstrap.bundle.min.js: { weight: -48 }
     js/base.js: {}
-    js/custom.js: {}
+    js/custom.js: { weight: 100 }
   css:
     component:
       scss/style.css: {}
