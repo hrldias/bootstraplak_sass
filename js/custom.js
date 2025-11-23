@@ -36,6 +36,7 @@
   });
 })(jQuery);
 
+
 (function (Drupal, $, once) {
   Drupal.behaviors.loginModalTrigger = {
     attach: function (context) {

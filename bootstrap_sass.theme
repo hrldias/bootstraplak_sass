@@ -13,7 +13,7 @@ use Drupal\user\Entity\User;
 
 
 /**
- * Implements hook_form_system_theme_settings_alter() for settings form.
+ * Implements hook_form_system_theme_settings_alter() for  settings form.
  *
  * Replace Bootstrap setting options with subtheme ones.
  */

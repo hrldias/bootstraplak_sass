@@ -16,18 +16,15 @@ global-styling:
 swiper:
   css:
     theme:
-     swiper/swiper-bundle.min.css: {}
-
+     swiper/swiper-bundle.min.css: {} 
   js:
      swiper/swiper-bundle.min.js: {}
-
   dependencies:
      - core/drupal
 
 swiper-init:
   js:
     js/swiper-init.js: {}
-
   dependencies:
     - bootstrap_sass/swiper      
 
