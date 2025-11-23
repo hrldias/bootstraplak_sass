@@ -29,3 +29,13 @@ swiper-init:
 
   dependencies:
     - bootstrap_sass/swiper      
+
+login-model-popup:
+  js:
+    js/login-model-popup.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal
+    - core/drupalSettings
+    - bootstrap_sass/global-styling

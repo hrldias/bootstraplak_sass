@@ -534,7 +534,11 @@ a {
   font-weight: 600;
 }
 
-
+// <----- Ad list view page ------->
+.page-view-ad-list > * .title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
 
 
 //screens 576px and highre
