@@ -1,36 +1,35 @@
 global-styling:
   version: VERSION
-
   js:
+    
     js/bootstrap.bundle.min.js: { weight: -48 }
     js/base.js: {}
-    js/custom.js:
-      dependencies:
-        - core/jquery
-        - core/jquery.once
-        - core/drupal
-        - core/drupalSettings
-
+    js/custom.js: {}
+       dependencies:
+          - core/jquery
+          - core/jquery.once  
+          - core/drupal
+      
   css:
-    theme:
+    component:
       scss/style.css: {}
-
   dependencies:
     - core/jquery
+    - core/jquery.once  
     - core/drupal
 
 swiper:
   css:
     theme:
-      swiper/swiper-bundle.min.css: {}
+     swiper/swiper-bundle.min.css: {} 
   js:
-    swiper/swiper-bundle.min.js: {}
+     swiper/swiper-bundle.min.js: {}
   dependencies:
-    - core/drupal
+     - core/drupal
 
 swiper-init:
   js:
     js/swiper-init.js: {}
   dependencies:
-    - bootstrap_sass/swiper    
+    - bootstrap_sass/swiper      
 
