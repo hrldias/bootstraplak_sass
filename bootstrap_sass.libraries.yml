@@ -8,6 +8,7 @@ global-styling:
       dependencies:
         - core/jquery
         - core/jquery.once
+        - core/once
         - core/drupal
         - core/drupalSettings
 
@@ -18,6 +19,7 @@ global-styling:
   dependencies:
     - core/jquery
     - core/drupal
+    - core/once
 
 swiper:
   css:
