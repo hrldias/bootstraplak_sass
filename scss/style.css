@@ -14168,7 +14168,7 @@ a {
   z-index: 2000;
   left: 50%;
   transform: translateX(-50%);
-  width: auto;
+  min-width: 21rem;
 }
 
 .offcanvas.offcanvas-start {
@@ -14385,7 +14385,7 @@ a {
 
 .hero-section {
   height: 500px;
-  background-image: url(/sites/default/files/heroimage.jpg);
+  background-image: url(/sites/default/files/heroimage.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 88% 50%;
