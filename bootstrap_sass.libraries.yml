@@ -14,7 +14,7 @@ global-styling:
 
   css:
     theme:
-      scss/style.css: {}
+      scss/critical-front.css: {}
 
   dependencies:
     - core/jquery
