@@ -17,7 +17,7 @@ global-styling:
       scss/style.css: {}
 
   dependencies:
-    - core/jquery
+    - core/jquery 
     - core/drupal
     - core/once
 

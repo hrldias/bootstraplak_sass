@@ -90,6 +90,9 @@ header {
   color: rgb(0, 0, 0);
   white-space: nowrap;
 }
+.navbar-brand img {
+  height: 35px;
+}
 
 .offcanvas {
   position: fixed;
