@@ -14384,13 +14384,22 @@ a {
 
 .hero-section {
   height: 500px;
-  background-image: url(/sites/default/files/heroimage.webp);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 88% 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .hero-contect {
+  position: relative;
+  z-index: 2;
   margin-top: auto;
   margin-bottom: auto;
   text-align: center;
@@ -14574,6 +14583,10 @@ a {
     display: inline-block;
     margin-right: 25px;
   }
+  .hero-image {
+    -o-object-position: 80% 0%;
+       object-position: 80% 0%;
+  }
 }
 @media (min-width: 768px) {
   .navbar-brand img {
@@ -14582,6 +14595,10 @@ a {
   .hero-contect {
     width: 50%;
     margin-left: 3rem;
+  }
+  .hero-image {
+    -o-object-position: 72% 0%;
+       object-position: 72% 0%;
   }
   .homepg-section {
     margin-top: 100px !important;
@@ -14597,6 +14614,10 @@ a {
   .hero-contect {
     width: 40%;
     margin-left: 4rem;
+  }
+  .hero-image {
+    -o-object-position: 72% 0%;
+       object-position: 72% 0%;
   }
   .navbar-brand img {
     height: 60px;
