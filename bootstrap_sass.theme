@@ -85,22 +85,3 @@ function bootstrap_sass_preprocess_html(array &$variables) {
   }
 }
 
-
-use Drupal\Core\Asset\AttachedAssets;
-
-function bootstrap_sass_page_attachments_alter(array &$attachments) {
-  if (!\Drupal::service('path.matcher')->isFrontPage()) {
-    return;
-  }
-
-  if (empty($attachments['#attached']['css'])) {
-    return;
-  }
-
-  foreach ($attachments['#attached']['css'] as $path => $options) {
-    // Remove ONLY the heavy theme stylesheet
-    if (str_contains($path, 'themes/custom/bootstraplak_sass/scss/style.css')) {
-      unset($attachments['#attached']['css'][$path]);
-    }
-  }
-}
