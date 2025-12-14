@@ -26,7 +26,9 @@
 #}
 
 
-{# Preload the style.css in homepage #}
+{# 
+  // Preload the style.css in homepage 
+
 <link rel="preload"
       as="style"
       href="/{{ directory }}/scss/style.css"
@@ -35,8 +37,9 @@
 <noscript>
   <link rel="stylesheet" href="/{{ directory }}/scss/style.css">
 </noscript>
-
-
+#}
+ 
+ 
 {# 
 
  //This can be used to inline the critical css in homepage. The critical_css 
