@@ -14315,6 +14315,19 @@ a {
   color: #A3B1FF;
 }
 
+.icon-textwrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  vertical-align: middle;
+}
+
+.icon-text {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+
 .fs-wrapper {
   display: inline-flex;
   list-style: none;
@@ -14324,11 +14337,12 @@ a {
 .fs-wrapper .fs-icon {
   position: relative;
   background: #ffffff;
+  fill: #140f46;
   border-radius: 50%;
+  padding: 7px;
   margin: 10px;
-  width: 45px;
-  height: 45px;
-  font-size: 25px;
+  width: 40px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14343,14 +14357,17 @@ a {
 .fs-wrapper .facebook:hover {
   background: #1877F2;
   color: #ffffff;
+  fill: #E0E0E0;
 }
 .fs-wrapper .twitter:hover {
   background: #1DA1F2;
   color: #ffffff;
+  fill: #E0E0E0;
 }
 .fs-wrapper .instagram:hover {
   background: #E4405F;
   color: #ffffff;
+  fill: #E0E0E0;
 }
 
 .copyright-section {
@@ -14616,8 +14633,8 @@ a {
     margin-left: 4rem;
   }
   .hero-image {
-    -o-object-position: 72% 0%;
-       object-position: 72% 0%;
+    -o-object-position: 72% 80%;
+       object-position: 72% 80%;
   }
   .navbar-brand img {
     height: 60px;
