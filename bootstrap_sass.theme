@@ -65,23 +65,10 @@ function bootstrap_sass_preprocess_page(&$variables) {
 
 
 
-/**
- * Get critical-front.css content to front page to improve speed. 
- */
 
-use Drupal\Core\Theme\ThemeManagerInterface;
 
-function bootstrap_sass_preprocess_html(array &$variables) {
-  if (\Drupal::service('path.matcher')->isFrontPage()) {
 
-    $theme_path = \Drupal::service('extension.path.resolver')
-      ->getPath('theme', 'bootstrap_sass');
 
-    $path = DRUPAL_ROOT . '/' . $theme_path . '/scss/critical-front.css';
 
-    if (file_exists($path)) {
-      $variables['critical_css'] = file_get_contents($path);
-    }
-  }
-}
+
 

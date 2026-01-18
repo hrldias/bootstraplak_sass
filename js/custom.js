@@ -20,39 +20,7 @@
 
 })(jQuery, Drupal);
 
-(function ($) {
-  $(document).ready(function () {
-    // Only apply hover on desktop
-    if (window.matchMedia("(min-width: 992px)").matches) {
-      $('.dropstart').hover(
-        function () {
-          $(this).addClass('show');
-          $(this).find('.dropdown-menu').addClass('show');
-        },
-        function () {
-          $(this).removeClass('show');
-          $(this).find('.dropdown-menu').removeClass('show');
-        }
-      );
-    }
-  });
-})(jQuery);
 
-
-(function (Drupal, $, once) {
-  Drupal.behaviors.loginModalTrigger = {
-    attach: function (context) {
-      $(once('loginModalTrigger', '.js-open-login-popup', context))
-        .on('click', function (e) {
-          e.preventDefault();
-          console.log('Button clicked, triggering modal');
-
-          const modal = new bootstrap.Modal(document.getElementById('loginModal'));
-          modal.show();
-        });
-    }
-  };
-})(Drupal, jQuery, once);
 
 */
 
@@ -90,4 +58,34 @@
 
     }
   };
+
+
+  // Kasada send interest modal - close on overlay click
+  Drupal.behaviors.kasadaModalClose = {
+    attach: function (context) {
+      // Use a flag to ensure we only attach the handler once globally
+      if (!window.kasadaOverlayHandlerAttached) {
+        $(document).on('click', '.ui-widget-overlay', function (e) {
+          // Find the visible dialog wrapper
+          var $dialogWrapper = $('.ui-dialog:visible');
+          
+          if ($dialogWrapper.length) {
+            // Get the actual dialog content element
+            var $dialogContent = $dialogWrapper.find('.ui-dialog-content');
+            
+            if ($dialogContent.length) {
+              // Call close on the actual content element that has the dialog initialized
+              $dialogContent.dialog('close');
+            }
+          }
+        });
+        
+        window.kasadaOverlayHandlerAttached = true;
+      }
+    }
+  };
+
+
+
+
 })(Drupal, jQuery, window.once);
