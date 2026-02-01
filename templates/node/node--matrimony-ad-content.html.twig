@@ -1,23 +1,113 @@
 
 
-<h2>This comes from matronomy ad content node</h2>
-Name : {{ content.field_co_display_name }} </br>
-Birth Day : {{ content.field_co_birth_day }} </br>
-Gender : {{ content.field_co_gender }} </br>
+<div class="ad-card-1 border border-2 rounded-3 m-2 mb-3 px-3 pb-2 mx-auto">
+        <div class="d-flex my-2">
+            {% if content.field_co_id_verified %} <div class="adcard-idverify-pil px-3 text-light fw-normal py-1 rounded-4 me-2">ID Verified</div>{% endif %}
+            <div class="flex-grow-1"></div>
+            <div class=""><strong>Ad No: {{ content.field_co_webform_submission_id }}</strong></div>
+        </div>
+        <div class="d-flex mt-4">
+            <div class="ad-card-image">
+                     {% if not node.field_co_display_image.isEmpty() %}
+                         <div> {{ content.field_co_display_image }} </div>
+                         <div> 
+                             <p class="text-center fst-italic fw-bol "> Click <span class="icon icon-hand-pointer"></span> </p>         
+                         </div>
+                     {% else %}
+                           <div>  <a> <img src="/sites/default/files/no-image.jpg" class="rounded-4"> </a>   </div> 
+                     {% endif %}
+            </div>
+            <div class="flex-grow-1 ms-2">
+                <table class="table table-sm ">
+                    <tbody>
+                        <tr>
+                            <th scope="row">Name</th>
+                            <td>:</td>
+                            <td> {{ content.field_co_display_name }} </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Gender</th>
+                            <td>:</td>
+                            <td> {{ content.field_co_gender }} </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Birthday</th>
+                            <td>:</td>
+                            <td> {{ content.field_co_birth_day }} </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Civil Status</th>
+                            <td>:</td>
+                            <td> {{ content.field_co_civil_status }} </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Height</th>
+                            <td>:</td>
+                            <td> {% if content.field_co_height_ft == "0" and content.field_co_height_in == "0"  %} - {% else %} {{ content.field_co_height_ft }}'   {{ content.field_co_height_in }}" {% endif %} </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Ethnity</th>
+                            <td>:</td>
+                            <td> {{ content.field_co_ethnity }} </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Religion</th>
+                            <td>:</td>
+                            <td> {{ content.field_co_religion }} </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Profession</th>
+                            <td>:</td>
+                            <td> {{ content.field_co_profession }} </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Education qualification</th>
+                            <td>:</td>
+                            <td> {{ content.field_co_edu_qualification }} </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Location (District)</th>
+                            <td>:</td>
+                            <td> {{ content.field_co_district }} </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Location (Town)</th>
+                            <td>:</td>
+                            <td> {{ content.field_co_town }} </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Cast</th>
+                            <td>:</td>
+                            <td> {{ content.field_co_caste }} </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Horoscope Matching</th>
+                            <td>:</td>
+                            <td> {{ content.field_co_horoscope_matching }} </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Currently Living Country</th>
+                            <td>:</td>
+                            <td> {{ content.field_co_currently_living_countr }} </td>
+                        </tr>
+                    </tbody>
+                </table>
 
+            </div>
+        </div>
 
-
+        <div>
+            <div><strong>Description:</strong></div>
+            <div> {{ content.field_co_short_description }} </div>
+        </div>
+        <div class="adcard-publish-date"><strong>Published On :</strong> {{ node.created.value|date('Y M d') }}  </div>
+    </div>
 
 
 
 {{ attach_library('core/drupal.dialog.ajax') }}
 
 
-
-
-
-
-Display Image : {{ content.field_co_display_image }} </br>
 
 
 

@@ -14044,6 +14044,10 @@ a {
   background: #0678be !important;
 }
 
+.bg-primary-lak {
+  background-color: rgb(27, 20, 100);
+}
+
 .site-name-slogan a {
   text-decoration: none;
 }
@@ -14550,6 +14554,16 @@ a {
   margin-bottom: 2rem;
 }
 
+.icon-hand-pointer {
+  display: inline-block;
+  width: 24px;
+  height: 26px;
+  background: url(/sites/default/files/hand-pointer-solid-full.svg) no-repeat center;
+  background-size: contain;
+  margin-bottom: -6px;
+  margin-top: 6px;
+}
+
 .ui-widget-overlay {
   background: #000;
   opacity: 0.7;
@@ -14604,6 +14618,59 @@ a {
 
 .kasada-send-interest-modal .ui-widget-overlay {
   cursor: pointer;
+}
+
+.container-btn-sndintrst {
+  max-width: 600px;
+  margin: auto;
+  justify-content: end;
+  display: flex;
+}
+.container-btn-sndintrst .button-5, .container-btn-sndintrst .button-1 {
+  padding: 6px 20px 6px 20px;
+  background-color: #1b1464;
+  border-radius: 30px;
+  color: #fff4f4;
+  box-shadow: 3px 3px 7px rgba(80, 72, 72, 0.3803921569);
+  transition: all 0.2s ease;
+}
+.container-btn-sndintrst .button-5:hover, .container-btn-sndintrst .button-1:hover {
+  background-color: #120c53;
+  box-shadow: 3px 3px 12px rgba(80, 72, 72, 0.67);
+}
+.container-btn-sndintrst .button-4 {
+  background-color: #e5ffe5;
+  color: green;
+  padding: 8px 30px;
+  border-radius: 7px;
+  font-weight: 600;
+}
+.container-btn-sndintrst .button-3 {
+  background-color: #f3f3f3;
+  color: #5d5555;
+  padding: 10px 30px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.container-btn-verifyprofile {
+  max-width: 600px;
+  margin: auto;
+}
+.container-btn-verifyprofile div {
+  margin-bottom: 15px;
+}
+.container-btn-verifyprofile .button-2 {
+  padding: 6px 20px 6px 20px;
+  background-color: #1b1464;
+  border-radius: 30px;
+  color: #fff4f4;
+  box-shadow: 3px 3px 7px rgba(80, 72, 72, 0.3803921569);
+  transition: all 0.2s ease;
+}
+.container-btn-verifyprofile .button-2:hover {
+  background-color: #120c53;
+  box-shadow: 3px 3px 12px rgba(80, 72, 72, 0.67);
 }
 
 @media (min-width: 576px) {

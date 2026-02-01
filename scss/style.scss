@@ -28,6 +28,9 @@ a {
     background: $primary-shade !important;
 }
 
+.bg-primary-lak{
+    background-color: rgb(27, 20, 100);
+}
 
 .site-name-slogan a {
     text-decoration: none;
@@ -568,6 +571,16 @@ a {
     margin-bottom: 2rem;
 }
 
+.icon-hand-pointer {
+    display: inline-block;
+    width: 24px;
+    height: 26px;
+    background: url(/sites/default/files/hand-pointer-solid-full.svg) no-repeat center;
+    background-size: contain;
+    margin-bottom: -6px;
+    margin-top: 6px;
+}
+
 // <-------- Model styling --------->
 .ui-widget-overlay {
     background: $black;
@@ -626,6 +639,68 @@ a {
 .kasada-send-interest-modal .ui-widget-overlay {
   cursor: pointer;
 }
+
+
+// <-------- Send interest button and related content --------->
+
+.container-btn-sndintrst {
+    max-width: 600px;
+    margin: auto;
+    justify-content: end;
+    display: flex;
+
+    .button-5, .button-1 {
+        padding: 6px 20px 6px 20px;
+        background-color: #1b1464;
+        border-radius: 30px;
+        color: #fff4f4;
+        box-shadow: 3px 3px 7px #50484861;
+        transition: all 0.2s ease;
+        &:hover{
+           background-color: #120c53;
+           box-shadow: 3px 3px 12px rgb(80 72 72 / 67%);
+        }
+    }
+
+    .button-4{
+        background-color: #e5ffe5;
+        color: green;
+        padding: 8px 30px;
+        border-radius: 7px;
+        font-weight: 600;
+    }
+
+    .button-3{
+        background-color: #f3f3f3;
+        color: #5d5555;
+        padding: 10px 30px;
+        border-radius: 10px;
+        font-weight: 600;
+    }
+}
+
+.container-btn-verifyprofile{
+    max-width: 600px;
+    margin: auto;
+    div{
+        margin-bottom: 15px;
+    }
+    .button-2{
+        padding: 6px 20px 6px 20px;
+        background-color: #1b1464;
+        border-radius: 30px;
+        color: #fff4f4;
+        box-shadow: 3px 3px 7px #50484861;
+        transition: all 0.2s ease;
+        &:hover{
+           background-color: #120c53;
+           box-shadow: 3px 3px 12px rgb(80 72 72 / 67%);
+        }
+    }
+}
+
+
+
 
 
 //screens 576px and highre
