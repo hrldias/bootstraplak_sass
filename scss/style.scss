@@ -700,6 +700,63 @@ a {
 }
 
 
+// <-------- Private profile page --------->
+.profile-card {
+  background: #fff;
+  max-width: 600px;
+}
+
+.section-title {
+  font-weight: 600;
+  color: rgb(27, 20, 100);
+  margin-bottom: 8px;
+}
+
+.profile-image img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.contact-box {
+  background: #f8f9fa;
+  border-left: 4px solid rgb(27, 20, 100);
+}
+
+.whatsapp-cta {
+  background: #f0fff4;
+  border: 1px solid #c6f6d5;
+  padding: 10px;
+  border-radius: 10px;
+  transition: 0.2s ease;
+}
+
+.whatsapp-cta:hover {
+  background: #e6fffa;
+  transform: translateY(-1px);
+}
+
+.chat-btn {
+  background: #25D366;
+  padding: 8px 16px;  
+  border-radius: 25px;
+  font-weight: 600;
+}
+
+
+
+// <-------- My Ads page --------->
+.kasada-thumb {
+    img{
+  width: 90px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 8px;
+  }
+}
+
+
+
 
 
 

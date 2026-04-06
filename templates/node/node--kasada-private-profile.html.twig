@@ -1,0 +1,160 @@
+
+{# New Design #}
+<div class="profile-card rounded-4 shadow p-3 mx-auto">
+
+  {# ===== HEADER ===== #}
+  <div class="d-flex align-items-start mb-3">
+    
+    {# Profile Image #}
+    <div class="profile-image me-3">
+      {% if not node.field_pp_display_image.isEmpty() %}
+        <div class="image-wrapper">
+          {{ content.field_pp_display_image }}
+          <div class="image-hint text-center small mt-1">
+            <span class="text-muted">
+                👆 Tap to enlarge
+            </span>
+          </div>
+        </div>  
+      {% else %}
+        <img src="/sites/default/files/no-image.jpg" class="rounded-4" width="120">
+      {% endif %}
+    </div>
+
+    {# Basic Info #}
+    <div class="flex-grow-1">
+      <h4 class="mb-1 fw-bold">
+        {{ content.field_pp_name }}
+      </h4>
+
+      <div class="text-muted small">
+        {{ content.field_pp_gender }}
+        {% if node.field_pp_birth_day.0.value %}
+          {% set birth_year = node.field_pp_birth_day.0.value|date("Y") %}
+          {% set current_year = "now"|date("Y") %}
+        • {{ current_year - birth_year }} yrs
+          {% endif %}
+        • {{ content.field_pp_district }}
+      </div>
+
+      <div class="fw-semibold mt-1">
+        {{ content.field_pp_profession }}
+      </div>
+
+      <div class="mt-2">
+        {% if content.field_pp_id_verified %} 
+          <span class="badge bg-success">✔ ID Verified</span>
+        {% endif %}
+      </div>
+    </div>
+
+  </div>
+
+  {# ===== CONTACT SECTION ===== #}
+   <div class="contact-box p-3 mb-4">
+
+  <div class="d-flex align-items-center mb-2">
+    <div class="contact-icon me-2">📱</div>
+    <div class="fw-semibold">Contact Details</div>
+  </div>
+
+  <div class="small text-muted mb-3">
+    You can now connect directly with this member.
+  </div>
+
+  {% if content.field_pp_whatsapp %}
+    <a href="https://wa.me/{{ content.field_pp_whatsapp }}" target="_blank" class="whatsapp-cta d-block text-decoration-none mb-2">
+
+      <div class="d-flex justify-content-between align-items-center">
+        <div>
+          <div class="small text-muted">💬 WhatsApp</div>
+          <div class="fw-bold fs-5">
+            {{ content.field_pp_whatsapp }}
+          </div>
+        </div>
+
+        <div class="chat-btn">Chat</div>
+      </div>
+
+    </a>
+  {% endif %}
+
+  {% if content.field_pp_email %}
+    <div class="small mt-2">
+      <strong>Email:</strong> {{ content.field_pp_email }}
+    </div>
+  {% endif %}
+
+</div>
+
+  {# ===== BASIC INFO ===== #}
+  <div class="mb-3">
+    <h6 class="section-title">👤 Basic Info</h6>
+
+    <div class="row small">
+      <div><strong>Name:</strong> {{ content.field_pp_name }}</div>
+      <div><strong>Gender:</strong> {{ content.field_pp_gender }}</div>
+
+      <div>
+        <strong>Height:</strong>
+        {% if content.field_pp_height_ft == "0" and content.field_pp_height_in == "0" %}
+          -
+        {% else %}
+          {{ content.field_pp_height_ft }}' {{ content.field_pp_height_in }}"
+        {% endif %}
+      </div>
+
+      <div><strong>Civil Status:</strong> {{ content.field_pp_civil_status }}</div>
+    </div>
+  </div>
+
+  {# ===== LOCATION ===== #}
+  <div class="mb-3">
+    <h6 class="section-title">🌍 Location</h6>
+
+    <div class="row small">
+      <div><strong>District:</strong> {{ content.field_pp_district }}</div>
+      <div><strong>Town:</strong> {{ content.field_pp_town }}</div>
+      <div><strong>Country:</strong> {{ content.field_pp_currently_living_country }}</div>
+    </div>
+  </div>
+
+  {# ===== CAREER & EDUCATION ===== #}
+  <div class="mb-3">
+    <h6 class="section-title">🎓 Career & Education</h6>
+
+    <div class="row small">
+      <div><strong>Profession:</strong> {{ content.field_pp_profession }}</div>
+      <div><strong>Education:</strong> {{ content.field_pp_edu_qualification }}</div>
+    </div>
+  </div>
+
+  {# ===== PERSONAL ===== #}
+  <div class="mb-3">
+    <h6 class="section-title">🧬 Personal</h6>
+
+    <div class="row small">
+      <div><strong>Religion:</strong> {{ content.field_pp_religion }}</div>
+      <div><strong>Ethnicity:</strong> {{ content.field_pp_ethnity }}</div>
+      <div><strong>Caste:</strong> {{ content.field_pp_caste }}</div>
+    </div>
+  </div>
+
+  {# ===== PREFERENCES ===== #}
+  <div class="mb-3">
+    <h6 class="section-title">🧿 Preferences</h6>
+
+    <div class="small">
+      <strong>Horoscope Matching:</strong> {{ content.field_pp_horoscope_matching }}
+    </div>
+  </div>
+
+  {# ===== DESCRIPTION ===== #}
+  <div class="mb-3">
+    <h6 class="section-title">📝 Description</h6>
+    <div class="small">
+      {{ content.field_pp_short_description }}
+    </div>
+  </div>
+
+</div>
