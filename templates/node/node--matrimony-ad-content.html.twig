@@ -1,8 +1,9 @@
 
 
 <div class="ad-card-1 border border-2 rounded-3 m-2 mb-3 px-3 pb-2 mx-auto">
-        <div class="d-flex my-2">
-            {% if content.field_co_id_verified %} <div class="adcard-idverify-pil px-3 text-light fw-normal py-1 rounded-4 me-2">ID Verified</div>{% endif %}
+        <div class="d-flex my-2 align-items-center gap-2">
+            {% if node.field_co_top_ad.value == '1' %} <div class="sld-badge-top badge">Top Ad</div>{% endif %}
+            {% if node.field_co_id_verified.value == '1' %} <div class="sld-badge-id badge">ID Verified</div>{% endif %}
             <div class="flex-grow-1"></div>
             <div class=""><strong>Ad No: {{ content.field_co_webform_submission_id }}</strong></div>
         </div>
