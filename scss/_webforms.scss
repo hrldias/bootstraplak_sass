@@ -1,0 +1,133 @@
+/* WEBFORM STYLES
+-------------------------------------------------*/
+
+/* ------- Ad submission success Notice ----------*/
+
+.ad-success-box {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 32px 24px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.success-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 16px;
+  background: #16a34a;
+  color: #fff;
+  font-size: 28px;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.success-title {
+  color: #1b1464;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.success-text {
+  color: #374151;
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.success-subtext {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.success-btn {
+  background-color: #1b1464;
+  color: #fff !important;
+  border-radius: 8px;
+  padding: 10px 18px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.success-btn:hover {
+  background-color: #140f4a;
+  transform: translateY(-1px);
+}
+
+
+
+
+/* ------- Webform access denied message ----------*/
+
+.access-denied-box {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 32px 24px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.access-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 16px;
+
+  background: rgba(27, 20, 100, 0.08); /* soft brand tint */
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.access-icon-svg {
+  width: 28px;
+  height: 28px;
+  fill: #1b1464; /* your theme color */
+}
+
+.access-title {
+  color: #1b1464;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.access-text {
+  color: #374151;
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.access-subtext {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.access-btn-primary {
+  background-color: #1b1464;
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px 18px;
+  text-decoration: none;
+}
+
+.access-btn-primary:hover {
+  background-color: #140f4a;
+  color: #fff;
+}
+
+.access-btn-secondary {
+  border: 1px solid #d1d5db;
+  color: #374151;
+  border-radius: 8px;
+  padding: 10px 18px;
+  text-decoration: none;
+}
+
+.access-btn-secondary:hover {
+  background: #f3f4f6;
+}

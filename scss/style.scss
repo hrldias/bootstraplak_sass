@@ -5,7 +5,8 @@ test compiled
 */
 
 // import files
-@import "import"; 
+@import "import";
+
 
 
 
@@ -61,13 +62,13 @@ a {
     }
 }
 
-.header-main{
+.header-main{ 
     background-color: $white;
     box-shadow: 0px 1px 5px $primary;
 }
-
-.sticky-top {
-    z-index: 11 !important;
+ 
+.sticky-top { 
+    z-index: 11 !important; 
 }
 
 .navbar-brand{
@@ -922,111 +923,20 @@ a {
 
 
 // <----- Contact Us page form ------->
-.contactus-title {
-  text-align: center;
-  font-size: 36px;
-  font-weight: 600;
-  color: #1b1464;
-  margin-bottom: 24px;
-}
+@import "contact-form";
 
-.contactus-subtitle {
-  text-align: center;
-  color: #6b7280;
-  font-size: 14px;
-  margin-bottom: 28px;
-}
 
-.webform-submission-contact-form {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 24px 28px;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
-  border: 1px solid #eef0f4;
+// <----- Webform /success/ access denied page styles ------->
+@import "webforms";
 
-  label {
-    font-weight: 500;
-    margin-bottom: 6px;
-    display: block;
-    color: #374151;
-  }
-
-  .form-item {
-    margin-bottom: 18px;
-  }
-
-  input,
-  textarea {
-    width: 100%;
-    padding: 10px 12px;
-    border: 1px solid #dcdcdc;
-    border-radius: 8px;
-    font-size: 14px;
-    transition: all 0.2s ease;
-    background: #fafbff;
-
-    &:focus {
-      border-color: #1b1464;
-      box-shadow: 0 0 0 2px rgba(27, 20, 100, 0.1);
-      outline: none;
-    }
-  }
-
-  textarea {
-    min-height: 140px;
-    resize: vertical;
-  }
-
-  .form-required {
-    // color: #e63946;
-    margin-left: 4px;
-  }
-
-  .form-submit {
-    background-color: #1b1464;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-weight: 500;
-    transition: all 0.2s ease;
-    cursor: pointer;
-
-    &:hover {
-      background-color: #140f4a;
-      transform: translateY(-1px);
-    }
-
-    &:active {
-      transform: translateY(0);
-    }
-  }
-
-  .form-actions {
-    margin-top: 10px;
-    text-align: center;
-  }
-
-  .form-item--error-message {
-    color: #e63946;
-    font-size: 13px;
-    margin-top: 4px;
-  }
-
-  .error {
-    border-color: #e63946 !important;
-  }
-}
 
 
 // <----- Ad list view page ------->
 .page-view-ad-list > * .title {
     text-align: center;
     margin-bottom: 2rem;
-}
-
+} 
+ 
 .icon-hand-pointer {
     display: inline-block;
     width: 24px;
@@ -1154,7 +1064,7 @@ a {
         }
     }
 }
-
+ 
 
 // <-------- Private profile page --------->
 .profile-card {
@@ -1173,7 +1083,7 @@ a {
   height: 152px;
   object-fit: cover;
 }
-
+ 
 .contact-box {
   background: #f8f9fa;
   border-left: 4px solid rgb(27, 20, 100);
@@ -1198,7 +1108,6 @@ a {
   border-radius: 25px;
   font-weight: 600;
 }
-
 
 
 // <-------- My Ads page --------->

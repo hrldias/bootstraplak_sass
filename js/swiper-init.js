@@ -5,7 +5,7 @@ const swiper = new Swiper('.swiper', {
   spaceBetween: 6,
   centeredSlides: true,
   loop: true,
-  //autoplay: { delay: 2300 },
+  autoplay: { delay: 2500 },
   breakpoints: {
     768: { 
       slidesPerView: 1.5,
