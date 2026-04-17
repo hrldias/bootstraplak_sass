@@ -173,9 +173,7 @@ a {
 }
 
 
-
-
-//Toast message 
+// message to user box
 .messages__wrapper{ 
     position: fixed !important;
     top: 56px;
@@ -183,6 +181,15 @@ a {
     left: 50%;
     transform: translateX(-50%);
     min-width: 21rem;
+ }
+
+ // message to user box 
+ .toast{
+    margin-top: 69px;
+    margin-right: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: fixed;
  }
 
 

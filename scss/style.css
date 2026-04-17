@@ -14205,6 +14205,14 @@ a {
   min-width: 21rem;
 }
 
+.toast {
+  margin-top: 69px;
+  margin-right: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: fixed;
+}
+
 .offcanvas.offcanvas-start {
   width: 260px;
 }

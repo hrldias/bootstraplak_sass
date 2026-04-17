@@ -59,7 +59,14 @@
                         <tr>
                             <th scope="row">Profession</th>
                             <td>:</td>
-                            <td> {{ content.field_co_profession }} </td>
+                            <td>
+                                {% set profession_term = node.field_co_profession_category.entity %}
+                                {% if profession_term and (profession_term.tid.value == 60 or 'Other ...' in profession_term.name.value) %}
+                                    {{ content.field_co_profession_other }}
+                                {% else %}
+                                    {{ content.field_co_profession_category }}
+                                {% endif %}
+                            </td>
                         </tr>
                         <tr>
                             <th scope="row">Education qualification</th>

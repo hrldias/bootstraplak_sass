@@ -87,5 +87,37 @@
 
 
 
+  //Make profession category not selectable in webform.
+  Drupal.behaviors.professionSelect = {
+  attach: function (context) {
+
+    $(once('professionSelect', '#edit-profession-category-b', context)).each(function () {
+
+      const select = this;
+
+      select.querySelectorAll('option').forEach(function (option) {
+
+        // Skip already processed options
+        if (option.dataset.processed) return;
+
+        if (option.value !== '' && option.text.indexOf('\u3000 •') !== 0) {
+          option.disabled = true;
+
+          // Add prefix only once
+          option.text = "▸ " + option.text;
+
+          // Mark as processed
+          option.dataset.processed = true;
+        }
+
+      });
+
+    });
+
+  }
+};
+
 
 })(Drupal, jQuery, window.once);
+
+
