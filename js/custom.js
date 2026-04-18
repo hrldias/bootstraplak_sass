@@ -21,7 +21,6 @@
 })(jQuery, Drupal);
 
 
-
 */
 
 
@@ -68,54 +67,51 @@
         $(document).on('click', '.ui-widget-overlay', function (e) {
           // Find the visible dialog wrapper
           var $dialogWrapper = $('.ui-dialog:visible');
-          
+
           if ($dialogWrapper.length) {
             // Get the actual dialog content element
             var $dialogContent = $dialogWrapper.find('.ui-dialog-content');
-            
+
             if ($dialogContent.length) {
               // Call close on the actual content element that has the dialog initialized
               $dialogContent.dialog('close');
             }
           }
         });
-        
+
         window.kasadaOverlayHandlerAttached = true;
       }
     }
   };
 
 
-
   //Make profession category not selectable in webform.
   Drupal.behaviors.professionSelect = {
-  attach: function (context) {
+    attach: function (context) {
 
-    $(once('professionSelect', '#edit-profession-category-b', context)).each(function () {
+      $(once('professionSelect', '#edit-profession-category-b', context)).each(function () {
 
-      const select = this;
+        const select = this;
 
-      select.querySelectorAll('option').forEach(function (option) {
+        select.querySelectorAll('option').forEach(function (option) {
 
-        // Skip already processed options
-        if (option.dataset.processed) return;
+          // Skip already processed options
+          if (option.dataset.processed) return;
 
-        if (option.value !== '' && option.text.indexOf('\u3000 •') !== 0) {
-          option.disabled = true;
+          if (option.value !== '' && option.text.indexOf('\u3000 •') !== 0) {
+            option.disabled = true;
 
-          // Add prefix only once
-          option.text = "▸ " + option.text;
+            // Mark as processed
+            option.dataset.processed = true;
+          }
 
-          // Mark as processed
-          option.dataset.processed = true;
-        }
+        });
 
       });
 
-    });
+    }
+  };
 
-  }
-};
 
 
 })(Drupal, jQuery, window.once);
