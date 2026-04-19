@@ -44,7 +44,16 @@
                         <tr>
                             <th scope="row">Height</th>
                             <td>:</td>
-                            <td> {% if content.field_co_height_ft == "0" and content.field_co_height_in == "0"  %} - {% else %} {{ content.field_co_height_ft }}'   {{ content.field_co_height_in }}" {% endif %} </td>
+                            <td>
+                                {% set total_in = node.field_co_height_calc_in.value %}
+                                {% if total_in is not empty and total_in > 0 %}
+                                    {% set feet = (total_in / 12)|round(0, 'floor') %}
+                                    {% set rem_in = total_in % 12 %}
+                                    {{ feet }}' {{ rem_in }}"
+                                {% else %}
+                                    -
+                                {% endif %}
+                            </td>
                         </tr>
                         <tr>
                             <th scope="row">Ethnity</th>
@@ -60,13 +69,18 @@
                             <th scope="row">Profession</th>
                             <td>:</td>
                             <td>
-                                {% set profession_term = node.field_co_profession_category.entity %}
-                                {% if profession_term and (profession_term.tid.value == 60 or 'Other ...' in profession_term.name.value) %}
+                                {% set profession_term = node.field_co_profession.entity %}
+                                {% if profession_term and 'Other ...' in profession_term.name.value %}
                                     {{ content.field_co_profession_other }}
                                 {% else %}
-                                    {{ content.field_co_profession_category }}
+                                    {{ content.field_co_profession }}
                                 {% endif %}
                             </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Work Sector</th>
+                            <td>:</td>
+                            <td> {{ content.field_co_work_sector }} </td>
                         </tr>
                         <tr>
                             <th scope="row">Education qualification</th>
