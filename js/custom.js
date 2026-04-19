@@ -86,7 +86,7 @@
 
 
   //Make profession category not selectable in webform.
-  Drupal.behaviors.professionSelect = {
+   Drupal.behaviors.professionSelect = {
     attach: function (context) {
 
       $(once('professionSelect', '#edit-profession-category-b', context)).each(function () {
@@ -110,7 +110,7 @@
       });
 
     }
-  };
+  }; 
 
 
 

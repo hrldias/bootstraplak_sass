@@ -15156,6 +15156,118 @@ a {
   background: #f3f4f6;
 }
 
+legend {
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+label {
+  margin-bottom: 4px;
+  display: inline-block !important;
+}
+
+.form-select:focus {
+  box-shadow: none;
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+.ad-form-title-1 {
+  max-width: 580px;
+  margin: auto;
+}
+
+.webform-button--submit {
+  padding: 10px 18px;
+  font-weight: 500;
+}
+
+.js-webform-image-file button[data-drupal-selector=edit-display-image-remove-button] {
+  background-color: #dc3545;
+  border: none;
+  font-size: 13px;
+  padding: 4px 10px;
+  display: flex;
+}
+
+#edit-profession-category-b option:disabled {
+  color: #000;
+  font-weight: 600;
+  opacity: 1;
+}
+
+/* Select profession box styles for select2  */
+.select2-container--default .select2-results__option[aria-disabled=true] {
+  color: #1a1a1a;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding-left: 8px;
+  cursor: default;
+  opacity: 1 !important;
+}
+
+.select2-selection.select2-selection--single[aria-expanded=true] {
+  background: #f7f7f7;
+}
+
+.select2-dropdown.select2-dropdown--below {
+  background: #f7f7f7;
+}
+
+#select2-edit-profession-category-b-results {
+  max-height: 360px;
+}
+
+.select2-container .select2-selection--single {
+  height: unset;
+  border-radius: 6px;
+  padding: 0.375rem;
+  font-weight: 400;
+}
+
+.select2-container--default .select2-selection--single {
+  border: 1px solid #e3dbdb;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  line-height: unset;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 40px;
+  right: 8px;
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field {
+  border: 1px solid #aaa;
+  display: none;
+}
+
+/* Form inline vaidation error message styling */
+.webform-submission-form strong.error.form-item--error-message {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #f7041a;
+}
+
+input.form-control.error, input.form-radio.error {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.15);
+}
+
+.input-group {
+  flex-wrap: wrap; /* Allows the error message to drop to a new line */
+}
+
+.input-group > .form-item--error-message {
+  width: 100%; /* Forces the error to take the full width */
+  order: 3; /* Ensures it appears after the input and the addon */
+  font-size: 0.85rem;
+  margin-top: 5px;
+}
+
 .page-view-ad-list > * .title {
   text-align: center;
   margin-bottom: 2rem;

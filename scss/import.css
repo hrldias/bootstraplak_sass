@@ -2161,6 +2161,7 @@ progress {
 }
 .table > :not(caption) > * > * {
   padding: 0.5rem 0.5rem;
+  color: var(--bs-table-color-state, var(--bs-table-color-type, var(--bs-table-color)));
   background-color: var(--bs-table-bg);
   border-bottom-width: var(--bs-border-width);
   box-shadow: inset 0 0 0 9999px var(--bs-table-bg-state, var(--bs-table-bg-type, var(--bs-table-accent-bg)));
@@ -13738,6 +13739,41 @@ nav.tabs ul .nav-item.active a {
  * @file
  * Visual styles for Bartik's ui-widget component.
  */
+/**
+ * @file
+ * Styles for Bartik's modal windows
+ */
+.ui-widget-overlay {
+  background: #000;
+  opacity: 0.7;
+}
+
+.ui-dialog {
+  border-radius: 0;
+}
+
+.ui-dialog input,
+.ui-dialog select,
+.ui-dialog textarea {
+  font-size: 1rem;
+}
+
+.ui-dialog .button {
+  background-color: #fff;
+  background-image: linear-gradient(to bottom, #f3f3f3, #e8e8e8);
+  border: 1px solid #e4e4e4;
+  border-bottom-color: #b4b4b4;
+  border-left-color: #d2d2d2;
+  border-right-color: #d2d2d2;
+  color: #3a3a3a;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: normal;
+  text-align: center;
+  padding: 0.25em 1.063em;
+  border-radius: 1em;
+}
+
 /**
  * @file
  * Theme styling for user module.
