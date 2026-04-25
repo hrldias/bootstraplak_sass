@@ -89,7 +89,7 @@
    Drupal.behaviors.professionSelect = {
     attach: function (context) {
 
-      $(once('professionSelect', '#edit-profession-category-b', context)).each(function () {
+      $(once('professionSelect', '#edit-profession', context)).each(function () {
 
         const select = this;
 
