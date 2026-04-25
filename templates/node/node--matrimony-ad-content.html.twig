@@ -66,26 +66,19 @@
                             <td> {{ content.field_co_religion }} </td>
                         </tr>
                         <tr>
-                            <th scope="row">Profession</th>
+                            <th scope="row">Horoscope Matching</th>
                             <td>:</td>
-                            <td>
-                                {% set profession_term = node.field_co_profession.entity %}
-                                {% if profession_term and 'Other ...' in profession_term.name.value %}
-                                    {{ content.field_co_profession_other }}
-                                {% else %}
-                                    {{ content.field_co_profession }}
-                                {% endif %}
-                            </td>
+                            <td> {{ content.field_co_horoscope_matching }} </td>
                         </tr>
                         <tr>
-                            <th scope="row">Work Sector</th>
+                            <th scope="row">Cast</th>
                             <td>:</td>
-                            <td> {{ content.field_co_work_sector }} </td>
+                            <td> {{ content.field_co_caste }} </td>
                         </tr>
                         <tr>
-                            <th scope="row">Education qualification</th>
+                            <th scope="row">Currently Living Country</th>
                             <td>:</td>
-                            <td> {{ content.field_co_edu_qualification }} </td>
+                            <td> {{ content.field_co_currently_living_countr }} </td>
                         </tr>
                         <tr>
                             <th scope="row">Location (District)</th>
@@ -98,19 +91,26 @@
                             <td> {{ content.field_co_town }} </td>
                         </tr>
                         <tr>
-                            <th scope="row">Cast</th>
+                            <th scope="row">Education qualification</th>
                             <td>:</td>
-                            <td> {{ content.field_co_caste }} </td>
+                            <td> {{ content.field_co_edu_qualification }} </td>
                         </tr>
                         <tr>
-                            <th scope="row">Horoscope Matching</th>
+                            <th scope="row">Work Sector</th>
                             <td>:</td>
-                            <td> {{ content.field_co_horoscope_matching }} </td>
+                            <td> {{ content.field_co_work_sector }} </td>
                         </tr>
                         <tr>
-                            <th scope="row">Currently Living Country</th>
+                            <th scope="row">Profession</th>
                             <td>:</td>
-                            <td> {{ content.field_co_currently_living_countr }} </td>
+                            <td>
+                                {% set profession_term = node.field_co_profession.entity %}
+                                {% if profession_term and 'Other ...' in profession_term.name.value %}
+                                    {{ content.field_co_profession_other }}
+                                {% else %}
+                                    {{ content.field_co_profession }}
+                                {% endif %}
+                            </td>
                         </tr>
                     </tbody>
                 </table>

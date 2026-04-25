@@ -38,7 +38,11 @@
       </div>
 
       <div class="fw-semibold mt-1">
-        {{ content.field_pp_profession }}
+        {% if node.field_pp_profession.entity.name.value == 'Other ...' and node.field_pp_profession_other.value %}
+          {{ node.field_pp_profession_other.value }}
+        {% else %}
+          {{ content.field_pp_profession }}
+        {% endif %}
       </div>
 
       <div class="mt-2">
@@ -62,8 +66,8 @@
     You can now connect directly with this member.
   </div>
 
-  {% if content.field_pp_whatsapp %}
-    <a href="https://wa.me/{{ content.field_pp_whatsapp }}" target="_blank" class="whatsapp-cta d-block text-decoration-none mb-2">
+  {% if node.field_pp_whatsapp.value %}
+    <a href="https://wa.me/{{ node.field_pp_whatsapp.value|replace({' ': ''}) }}" target="_blank" class="whatsapp-cta d-block text-decoration-none mb-2">
 
       <div class="d-flex justify-content-between align-items-center">
         <div>
@@ -100,33 +104,12 @@
         {% if content.field_pp_height_ft == "0" and content.field_pp_height_in == "0" %}
           -
         {% else %}
-          {{ content.field_pp_height_ft }}' {{ content.field_pp_height_in }}"
+          {{ content.field_pp_height_ft }}' {% if node.field_pp_height_in.value %}{{ content.field_pp_height_in }}{% else %}0{% endif %}"
         {% endif %}
       </div>
 
       <div><strong>Birth Day:</strong> {{ content.field_pp_birth_day }}</div>
       <div><strong>Civil Status:</strong> {{ content.field_pp_civil_status }}</div>
-    </div>
-  </div>
-
-  {# ===== LOCATION ===== #}
-  <div class="mb-3">
-    <h6 class="section-title">🌍 Location</h6>
-
-    <div class="row small">
-      <div><strong>District:</strong> {{ content.field_pp_district }}</div>
-      <div><strong>Town:</strong> {{ content.field_pp_town }}</div>
-      <div><strong>Country:</strong> {{ content.field_pp_currently_living_countr }}</div>
-    </div>
-  </div>
-
-  {# ===== CAREER & EDUCATION ===== #}
-  <div class="mb-3">
-    <h6 class="section-title">🎓 Career & Education</h6>
-
-    <div class="row small">
-      <div><strong>Profession:</strong> {{ content.field_pp_profession }}</div>
-      <div><strong>Education:</strong> {{ content.field_pp_edu_qualification }}</div>
     </div>
   </div>
 
@@ -147,6 +130,35 @@
 
     <div class="small">
       <strong>Horoscope Matching:</strong> {{ content.field_pp_horoscope_matching }}
+    </div>
+  </div>
+
+  {# ===== LOCATION ===== #}
+  <div class="mb-3">
+    <h6 class="section-title">🌍 Location</h6>
+
+    <div class="row small">
+      <div><strong>Country:</strong> {{ content.field_pp_currently_living_countr }}</div>
+      {% if node.field_pp_currently_living_countr.entity.name.value == 'Sri Lanka' %}
+        <div><strong>District:</strong> {{ content.field_pp_district }}</div>
+        <div><strong>Town:</strong> {{ content.field_pp_town }}</div>
+      {% endif %}
+    </div>
+  </div>
+
+  {# ===== CAREER & EDUCATION ===== #}
+  <div class="mb-3">
+    <h6 class="section-title">🎓 Career & Education</h6>
+
+    <div class="row small">
+      <div><strong>Profession:</strong>
+        {% if node.field_pp_profession.entity.name.value == 'Other ...' and node.field_pp_profession_other.value %}
+          {{ node.field_pp_profession_other.value }}
+        {% else %}
+          {{ content.field_pp_profession }}
+        {% endif %}
+      </div>
+      <div><strong>Education:</strong> {{ content.field_pp_edu_qualification }}</div>
     </div>
   </div>
 
