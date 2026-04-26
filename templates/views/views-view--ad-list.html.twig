@@ -1,0 +1,25 @@
+{% set current = url('<current>')|render|striptags|trim %}
+{% set female_path = path('view.ad_list.page_3')|trim %}
+{% set male_path = path('view.ad_list.page_2')|trim %}
+
+<div class="views-gender-tabs">
+
+  <a href="{{ female_path }}"
+     class="views-gender-tab {{ female_path in current ? 'is-active' }}">
+    <span class="tab-inner">
+      <img src="/sites/default/files/girl-logo.png" alt="Brides">
+      <span>Brides</span>
+    </span>
+  </a>
+
+  <a href="{{ male_path }}"
+     class="views-gender-tab {{ male_path in current ? 'is-active' }}">
+    <span class="tab-inner">
+      <img src="/sites/default/files/boy-logo.png" alt="Grooms">
+      <span>Grooms</span>
+    </span>
+  </a>
+
+</div>
+
+{{ rows }}

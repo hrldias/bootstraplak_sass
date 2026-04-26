@@ -1128,6 +1128,68 @@ a {
 }
 
 
+// <-------- Gendet tabs in Ad list view --------->
+ .views-gender-tabs {
+  display: flex;
+  justify-content: center;   /* CENTER them */
+  gap: 1rem;
+  margin: 1.8rem 0 2rem;
+}
+
+/* Clickable area */
+.views-gender-tab {
+  text-decoration: none;
+}
+
+/* Inner pill */
+.views-gender-tab .tab-inner {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.65rem 1.6rem;   /* bigger */
+  border-radius: 999px;
+  background: #f3f1f8;
+  color: #555;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.25s ease;
+  border: 1px solid transparent;
+}
+
+/* Icon */
+.views-gender-tab img {
+  width: 25px;
+  height: 30px;
+}
+
+/* Hover */
+.views-gender-tab:hover .tab-inner {
+  background: #e8e3f7;
+  color: rgb(27, 20, 100);
+}
+
+/* 🔥 ACTIVE (this is the key change) */
+.views-gender-tab.is-active .tab-inner {
+  background: rgb(27, 20, 100);
+  color: #fff;
+  font-weight: 600;
+  border-color: rgb(27, 20, 100);
+  box-shadow: 0 6px 16px rgba(27, 20, 100, 0.25);
+  transform: translateY(-1px); /* subtle lift */
+}
+
+/* Make icon visible on dark bg */
+.views-gender-tab.is-active img {
+  filter: brightness(0) invert(1);
+}
+
+
+
+
+
+
+
+
 
 
 
