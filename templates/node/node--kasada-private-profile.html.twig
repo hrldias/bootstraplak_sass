@@ -2,6 +2,19 @@
 {# New Design #}
 <div class="profile-card rounded-4 shadow p-3 mx-auto">
 
+  {# ===== PROFILE STATUS (owner only) ===== #}
+  {% if profile_status_label %}
+    {% set status_classes = {
+      'pending_verification': 'warning',
+      'verified': 'success',
+      'rejected': 'danger',
+      'suspended': 'secondary',
+    } %}
+    <div class="mb-3 text-end">
+      <strong>{{ 'Profile Status'|t }}:</strong> <span class="badge bg-{{ status_classes[profile_status_key] ?? 'secondary' }} fs-6">{{ profile_status_label }}</span>
+    </div>
+  {% endif %}
+
   {# ===== HEADER ===== #}
   <div class="d-flex align-items-start mb-3">
     
