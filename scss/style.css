@@ -14194,7 +14194,8 @@ a {
 }
 
 .navbar-nav .nav-link {
-  color: #333; /* softer than black */
+  color: #333;
+  /* softer than black */
   font-weight: 500;
   font-size: 15px;
   padding: 8px 14px;
@@ -14203,7 +14204,8 @@ a {
 }
 
 .navbar-nav .nav-link:hover {
-  background: rgba(27, 20, 100, 0.06); /* your theme tint */
+  background: rgba(27, 20, 100, 0.06);
+  /* your theme tint */
   color: #1b1464;
 }
 
@@ -14318,14 +14320,16 @@ a {
   background-color: rgba(27, 20, 100, 0.9);
 }
 
-.nav-link--user-login, .nav-link--si-user-login {
+.nav-link--user-login,
+.nav-link--si-user-login {
   margin-left: 5px;
   background-color: rgb(27, 20, 100);
   border-radius: 2rem;
   color: white;
   padding: 5px 12px;
 }
-.nav-link--user-login:hover, .nav-link--si-user-login:hover {
+.nav-link--user-login:hover,
+.nav-link--si-user-login:hover {
   background-color: rgba(27, 20, 100, 0.9);
   color: #ffffff;
 }
@@ -14338,7 +14342,8 @@ a {
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background-color: rgb(27, 20, 100); /* your site color */
+  background-color: rgb(27, 20, 100);
+  /* your site color */
   color: #fff;
   font-weight: 600;
   display: flex;
@@ -14365,7 +14370,9 @@ a {
   padding: 3rem 0;
 }
 
-.footer-second-title, .footer-third-title, .footer-third-title2 {
+.footer-second-title,
+.footer-third-title,
+.footer-third-title2 {
   color: #F1F1F1;
   margin-top: 2rem;
 }
@@ -14470,7 +14477,8 @@ a {
 #auth_box2 .form-control:focus {
   box-shadow: none;
 }
-#auth_box2 .password-field, #auth_box2 .password-confirm {
+#auth_box2 .password-field,
+#auth_box2 .password-confirm {
   width: 100%;
 }
 #auth_box2 .password-confirm-message {
@@ -14678,7 +14686,8 @@ a {
 }
 
 .section-soft {
-  background: #f7f8fb; /* very light grey */
+  background: #f7f8fb;
+  /* very light grey */
   padding: 40px 20px;
   border-radius: 10px;
 }
@@ -15283,6 +15292,54 @@ input.form-control.error, input.form-radio.error {
   margin-top: 6px;
 }
 
+.views-gender-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.8rem 0 2rem;
+}
+
+.views-gender-tab {
+  text-decoration: none;
+}
+
+.views-gender-tab .tab-inner {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.65rem 1.6rem; /* bigger */
+  border-radius: 999px;
+  background: #f3f1f8;
+  color: #555;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.25s ease;
+  border: 1px solid transparent;
+}
+
+.views-gender-tab img {
+  width: 25px;
+  height: 30px;
+}
+
+.views-gender-tab:hover .tab-inner {
+  background: #e8e3f7;
+  color: rgb(27, 20, 100);
+}
+
+.views-gender-tab.is-active .tab-inner {
+  background: rgb(27, 20, 100);
+  color: #fff;
+  font-weight: 600;
+  border-color: rgb(27, 20, 100);
+  box-shadow: 0 6px 16px rgba(27, 20, 100, 0.25);
+  transform: translateY(-1px); /* subtle lift */
+}
+
+.views-gender-tab.is-active img {
+  filter: brightness(0) invert(1);
+}
+
 .ui-widget-overlay {
   background: #000;
   opacity: 0.7;
@@ -15345,7 +15402,8 @@ input.form-control.error, input.form-radio.error {
   justify-content: end;
   display: flex;
 }
-.container-btn-sndintrst .button-5, .container-btn-sndintrst .button-1 {
+.container-btn-sndintrst .button-5,
+.container-btn-sndintrst .button-1 {
   padding: 6px 20px 6px 20px;
   background-color: #1b1464;
   border-radius: 30px;
@@ -15353,7 +15411,8 @@ input.form-control.error, input.form-radio.error {
   box-shadow: 3px 3px 7px rgba(80, 72, 72, 0.3803921569);
   transition: all 0.2s ease;
 }
-.container-btn-sndintrst .button-5:hover, .container-btn-sndintrst .button-1:hover {
+.container-btn-sndintrst .button-5:hover,
+.container-btn-sndintrst .button-1:hover {
   background-color: #120c53;
   box-shadow: 3px 3px 12px rgba(80, 72, 72, 0.67);
 }
@@ -15443,60 +15502,6 @@ input.form-control.error, input.form-radio.error {
   border-radius: 8px;
 }
 
-.views-gender-tabs {
-  display: flex;
-  justify-content: center; /* CENTER them */
-  gap: 1rem;
-  margin: 1.8rem 0 2rem;
-}
-
-/* Clickable area */
-.views-gender-tab {
-  text-decoration: none;
-}
-
-/* Inner pill */
-.views-gender-tab .tab-inner {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  padding: 0.65rem 1.6rem; /* bigger */
-  border-radius: 999px;
-  background: #f3f1f8;
-  color: #555;
-  font-weight: 500;
-  font-size: 1rem;
-  transition: all 0.25s ease;
-  border: 1px solid transparent;
-}
-
-/* Icon */
-.views-gender-tab img {
-  width: 25px;
-  height: 30px;
-}
-
-/* Hover */
-.views-gender-tab:hover .tab-inner {
-  background: #e8e3f7;
-  color: rgb(27, 20, 100);
-}
-
-/* 🔥 ACTIVE (this is the key change) */
-.views-gender-tab.is-active .tab-inner {
-  background: rgb(27, 20, 100);
-  color: #fff;
-  font-weight: 600;
-  border-color: rgb(27, 20, 100);
-  box-shadow: 0 6px 16px rgba(27, 20, 100, 0.25);
-  transform: translateY(-1px); /* subtle lift */
-}
-
-/* Make icon visible on dark bg */
-.views-gender-tab.is-active img {
-  filter: brightness(0) invert(1);
-}
-
 @media (min-width: 576px) {
   #postad-button {
     margin-top: 0px;
@@ -15560,7 +15565,8 @@ input.form-control.error, input.form-radio.error {
   .menu-icon-text {
     display: none;
   }
-  .footer-second-title, .footer-third-title {
+  .footer-second-title,
+  .footer-third-title {
     margin-top: 0;
   }
   .region-footer-second {

@@ -1,0 +1,65 @@
+// <----- Ad list view page ------->
+.page-view-ad-list > * .title {
+    text-align: center;
+    margin-bottom: 2rem;
+} 
+ 
+.icon-hand-pointer {
+    display: inline-block;
+    width: 24px;
+    height: 26px;
+    background: url(/sites/default/files/hand-pointer-solid-full.svg) no-repeat center;
+    background-size: contain;
+    margin-bottom: -6px;
+    margin-top: 6px;
+}
+
+
+// <-------- Gender tabs in Ad list view --------->
+ .views-gender-tabs {
+  display: flex;
+  justify-content: center; 
+  gap: 1rem;
+  margin: 1.8rem 0 2rem;
+}
+
+.views-gender-tab {
+  text-decoration: none;
+}
+
+.views-gender-tab .tab-inner {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.65rem 1.6rem;   /* bigger */
+  border-radius: 999px;
+  background: #f3f1f8;
+  color: #555;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.25s ease;
+  border: 1px solid transparent;
+}
+
+.views-gender-tab img {
+  width: 25px;
+  height: 30px;
+}
+
+.views-gender-tab:hover .tab-inner {
+  background: #e8e3f7;
+  color: rgb(27, 20, 100);
+}
+
+.views-gender-tab.is-active .tab-inner {
+  background: rgb(27, 20, 100);
+  color: #fff;
+  font-weight: 600;
+  border-color: rgb(27, 20, 100);
+  box-shadow: 0 6px 16px rgba(27, 20, 100, 0.25);
+  transform: translateY(-1px); /* subtle lift */
+}
+
+.views-gender-tab.is-active img {
+  filter: brightness(0) invert(1);
+}
