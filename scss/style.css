@@ -15301,21 +15301,19 @@ input.form-control.error, input.form-radio.error {
 }
 
 /* Phone number Wrap country code + phone input into a flex row */
-#edit-whatsapp {
+#edit-contact-number, #edit-whatsapp {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
 }
-
-#edit-whatsapp > label {
+#edit-contact-number > label, #edit-whatsapp > label {
   width: 100%;
   margin-bottom: 4px;
 }
-
-#edit-whatsapp .form-item-whatsapp-country-code,
-#edit-whatsapp .form-item-whatsapp-phone {
-  margin-bottom: 0 !important;
-  flex: 0 0 auto;
+#edit-contact-number .description, #edit-whatsapp .description {
+  width: 100%;
+  font-size: 0.85em;
+  margin-top: 4px;
 }
 
 .phone-number-field .country-select {
@@ -15324,24 +15322,38 @@ input.form-control.error, input.form-radio.error {
   margin-right: 2px;
 }
 
+#edit-whatsapp .form-item-whatsapp-country-code,
+#edit-whatsapp .form-item-whatsapp-phone {
+  margin-bottom: 0 !important;
+  flex: 0 0 auto;
+}
 #edit-whatsapp .form-item-whatsapp-country-code select {
   width: auto;
   max-width: 180px;
 }
-
 #edit-whatsapp .form-item-whatsapp-phone {
   flex: 1 1 0;
   min-width: 0;
 }
-
 #edit-whatsapp .form-item-whatsapp-phone input {
   max-width: 160px;
 }
 
-#edit-whatsapp .description {
-  width: 100%;
-  font-size: 0.85em;
-  margin-top: 4px;
+#edit-contact-number .form-item-contact-number-country-code,
+#edit-contact-number .form-item-contact-number-phone {
+  margin-bottom: 0 !important;
+  flex: 0 0 auto;
+}
+#edit-contact-number .form-item-contact-number-country-code select {
+  width: auto;
+  max-width: 180px;
+}
+#edit-contact-number .form-item-contact-number-phone {
+  flex: 1 1 0;
+  min-width: 0;
+}
+#edit-contact-number .form-item-contact-number-phone input {
+  max-width: 160px;
 }
 
 .page-view-ad-list > * .title {
