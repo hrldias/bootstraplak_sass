@@ -7,8 +7,8 @@
             <div class="flex-grow-1"></div>
             <div class=""><strong>{{ 'Ad No:'|t }} {{ content.field_co_webform_submission_id }}</strong></div>
         </div>
-        <div class="d-flex mt-4">
-            <div class="ad-card-image">
+        <div class="d-flex flex-column flex-md-row mt-4 gap-3">
+            <div class="ad-card-image text-center mx-auto mx-md-0">
                      {% if not node.field_co_display_image.isEmpty() %}
                          <div> {{ content.field_co_display_image }} </div>
                          <div> 
@@ -18,7 +18,7 @@
                            <div>  <a> <img src="/sites/default/files/no-image.jpg" class="rounded-4"> </a>   </div> 
                      {% endif %}
             </div>
-            <div class="flex-grow-1 ms-2">
+            <div class="flex-grow-1">
                 <table class="table table-sm ">
                     <tbody>
                         <tr>
