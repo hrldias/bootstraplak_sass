@@ -85,6 +85,32 @@
   };
 
 
+  // Social login spinner feedback.
+  Drupal.behaviors.socialLoginFeedback = {
+    attach: function (context) {
+      once('social-login-feedback', '.socil-login-link', context)
+        .forEach(function (el) {
+          el.addEventListener('click', function () {
+            el.classList.add('is-loading');
+            el.setAttribute('aria-disabled', 'true');
+            el.style.pointerEvents = 'none';
+            var originalHTML = el.innerHTML;
+            el.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span> Connecting to Google\u2026';
+
+            // Reset if user navigates back (bfcache restore).
+            window.addEventListener('pageshow', function (e) {
+              if (e.persisted) {
+                el.classList.remove('is-loading');
+                el.removeAttribute('aria-disabled');
+                el.style.pointerEvents = '';
+                el.innerHTML = originalHTML;
+              }
+            }, { once: true });
+          });
+        });
+    }
+  };
+
   //Make profession category not selectable in webform.
   Drupal.behaviors.professionSelect = {
     attach: function (context) {
