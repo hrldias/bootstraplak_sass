@@ -78,7 +78,23 @@
                         <tr>
                             <th scope="row">{{ 'Living Country'|t }}</th>
                             <td>:</td>
-                            <td> {{ content.field_co_currently_living_countr }} </td>
+                            <td>
+                                {% set country_term = node.field_co_currently_living_countr.entity %}
+                                {% if country_term %}
+                                    {% set iso2 = country_term.field_iso2.value|lower %}
+                                    {% set country_name = country_term.label %}
+                                    <span class="country-with-flag">
+                                        <img
+                                            src="/sites/default/files/flags/h40/{{ iso2 }}.png"
+                                            width="40"
+                                            alt="{{ country_name }}"
+                                        />
+                                        {{ country_name }}
+                                    </span>
+                                {% else %}
+                                    {{ content.field_co_currently_living_countr }}
+                                {% endif %}
+                            </td>
                         </tr>
                         <tr>
                             <th scope="row">{{ 'District'|t }}</th>
