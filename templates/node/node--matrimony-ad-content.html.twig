@@ -81,7 +81,7 @@
                             <td>
                                 {% set country_term = node.field_co_currently_living_countr.entity %}
                                 {% if country_term %}
-                                    {% set iso2 = country_term.field_iso2.value|lower %}
+                                    {% set iso2 = country_term.field_iso2.value|default('')|lower %}
                                     {% set country_name = country_term.label %}
                                     <span class="country-with-flag">
                                         <img

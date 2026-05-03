@@ -5,7 +5,7 @@
   
   <div class="dropstart"> 
     <button class="usernm dropdown-toggle" data-bs-toggle="dropdown" type="button" aria-expanded="false">
-     {{ current_user_name|slice(0,2)|upper }}
+     {{ current_user_name|default('')|slice(0,2)|upper }}
     </button>
   
       <ul class="dropdown-menu " data-bs-popper="static">
