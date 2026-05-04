@@ -40,13 +40,17 @@
 
 
 
-//View passweod eye button styling
+//View password eye button styling
+
+.pwd-toggle-wrapper {
+  position: relative;
+  display: block;
+}
 
 .pwd-toggle {
   position: absolute;
   right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 34px; // adjust to vertically center with the input
   background: none;
   border: none;
   cursor: pointer;

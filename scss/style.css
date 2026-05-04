@@ -14491,11 +14491,15 @@ a {
   position: relative;
 }
 
+.pwd-toggle-wrapper {
+  position: relative;
+  display: block;
+}
+
 .pwd-toggle {
   position: absolute;
   right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 34px;
   background: none;
   border: none;
   cursor: pointer;
