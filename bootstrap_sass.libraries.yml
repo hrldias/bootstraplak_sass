@@ -36,3 +36,7 @@ swiper-init:
   dependencies:
     - bootstrap_sass/swiper    
 
+pwd-toggle:
+  js:
+    js/pwd-toggle.js: {}
+

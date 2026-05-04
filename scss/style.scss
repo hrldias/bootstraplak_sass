@@ -10,29 +10,29 @@ test compiled
 
 
 
-/* GENERAL STYLES
+/* GENERAL STYLES 
 -------------------------------------------------*/
 
 body {
   background: $body-bg;
 }
-
+ 
 
 /* COLORS
 --------------------------------------------------*/
 
-a {
+a { 
   color: $accent-shade;
 }
 
-.bg-inverse {
+.bg-inverse { 
   background: $primary-shade !important;
 }
 
 .bg-primary-lak {
   background-color: rgb(27, 20, 100);
 }
-
+ 
 .site-name-slogan a {
   text-decoration: none;
 }

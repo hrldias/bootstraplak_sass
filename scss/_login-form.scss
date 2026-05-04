@@ -9,7 +9,7 @@
   padding-top: 10px;
   margin-top: 2rem;
 
-  button {
+  #edit-submit {
     width: 100%;
     border-radius: 20px;
   }
@@ -20,6 +20,10 @@
     }
   }
 
+  .description{
+    display: none;
+  }
+
   .password-field,
   .password-confirm {
     width: 100%;
@@ -28,4 +32,33 @@
   .password-confirm-message {
     display: none;
   }
+
+  .form-item-pass{
+    position: relative; //To make view password eye toggler in position
+  }
+}
+
+
+
+//View passweod eye button styling
+
+.pwd-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: #6c757d;
+
+  &:hover {
+    color: #000;
+  }
+}
+
+.form-item-pass #edit-pass {
+  padding-right: 2.8rem; // prevent typed text hiding under the eye
+
 }
