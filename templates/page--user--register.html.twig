@@ -20,6 +20,7 @@
  */
 #}
 {% block head %}
+{{ attach_library('bootstrap_sass/pwd-toggle') }}
       {% if page.secondary_menu or page.top_header or page.top_header_form %}
         <nav{{ navbar_top_attributes }}>
           {% if container_navbar %}
@@ -43,7 +44,7 @@
           <nav class="navbar sticky-top navbar-expand-lg navbar-light">
             <div class="container-lg">
                <div id="knavbar-togler">
-	              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
+	              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="{{ 'Toggle navigation'|t }}">
 		            <span class="navbar-toggler-icon"></span>
 	              </button>
 	              <span class="menu-icon-text">{{ page.menu_togglet_text }}</span>
@@ -72,7 +73,7 @@
             <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
               <div class="offcanvas-header">
                 <span class="offcanvas-logo">{% if page.offcanves_logo %} {{ page.offcanves_logo }} {% endif %}</span>
-                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="{{ 'Close'|t }}"></button>
               </div>
               <div class="offcanvas-body">
                 {% if page.offcanves_menu %}
@@ -82,7 +83,7 @@
                 {% if logged_in %}
                  <ul class="nav flex-column">
                  <li class="nav-item"><hr></li>
-                 <li class="nav-item offcanvas-logout-btn"> <a href="{{ path('user.logout') }}" class=" text-danger fw-semibold" > Log Out </a></li>
+                 <li class="nav-item offcanvas-logout-btn"> <a href="{{ path('user.logout') }}" class=" text-danger fw-semibold" >{{ 'Log Out'|t }}</a></li>
                  </ul>
                 {% endif %}
               </div>
@@ -95,10 +96,10 @@
 
 
 
-<div id="auth_box2" class="register">
+<div class="auth-box2 register">
 
   <div id="middle_part">
-    <center><h2 class="title">{{ title }}</h2></center>
+    <h2 class="title auth-title">{{ title }}</h2>
 
     {{ page.highlighted }}
 

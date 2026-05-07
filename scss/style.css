@@ -14461,7 +14461,13 @@ a {
   padding-top: 0.5rem;
 }
 
-#auth_box2 {
+.auth-title {
+  text-align: center;
+  margin-bottom: 40px !important;
+  font-weight: bold;
+}
+
+.auth-box2 {
   max-width: 340px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin: auto;
@@ -14470,25 +14476,30 @@ a {
   padding-top: 10px;
   margin-top: 2rem;
 }
-#auth_box2 #edit-submit {
+.auth-box2 #edit-submit {
   width: 100%;
   border-radius: 20px;
+  margin-top: 1rem;
 }
-#auth_box2 .form-control:focus {
+.auth-box2 .form-control:focus {
   box-shadow: none;
 }
-#auth_box2 .description {
+.auth-box2 .description {
   display: none;
 }
-#auth_box2 .password-field,
-#auth_box2 .password-confirm {
+.auth-box2 .password-field,
+.auth-box2 .password-confirm {
   width: 100%;
 }
-#auth_box2 .password-confirm-message {
+.auth-box2 .password-confirm-message {
   display: none;
 }
-#auth_box2 .form-item-pass {
+.auth-box2 .form-item-pass {
   position: relative;
+}
+
+.has-error .invalid-feedback {
+  display: block;
 }
 
 .pwd-toggle-wrapper {
@@ -14498,8 +14509,8 @@ a {
 
 .pwd-toggle {
   position: absolute;
-  right: 10px;
-  top: 34px;
+  right: 12px;
+  top: 5px;
   background: none;
   border: none;
   cursor: pointer;
@@ -14512,6 +14523,10 @@ a {
 
 .form-item-pass #edit-pass {
   padding-right: 2.8rem;
+}
+
+.has-error .invalid-feedback {
+  display: block;
 }
 
 .hero-section {
