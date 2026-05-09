@@ -1,0 +1,327 @@
+
+// Styling the payment details once checkout completed in manual payment method.
+.checkout-complete {
+  max-width: 500px;
+  margin: auto;
+
+  > p {
+    margin-top: 3rem;
+    font-size: large;
+    font-weight: bold;
+  }
+
+  &__payment-instructions {
+    > h2 {
+      display: none;
+    }
+  }
+}
+
+
+// Checkout progress styling
+.checkout-progress {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px 0;
+}
+
+.checkout-progress--step {
+  position: relative;
+  display: flex !important;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #7b8190;
+  white-space: nowrap;
+}
+
+.checkout-progress--step::before {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #e7eaf4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 15px;
+  color: #5f6880;
+  transition: all 0.22s ease;
+}
+
+.checkout-progress--step:not(:last-child)::after {
+  content: "";
+  width: 54px;
+  height: 2px;
+  background: #d7dceb;
+  margin-left: 14px;
+}
+
+.checkout-progress--step__current {
+  color: #1b1464;
+  font-weight: 700;
+}
+
+.checkout-progress--step__current::before {
+  background: #1b1464;
+  color: #ffffff;
+  box-shadow: 0 8px 18px rgba(27, 20, 100, 0.20);
+}
+
+.checkout-progress--step__previous::before {
+  background: #1b1464;
+  color: #ffffff;
+}
+
+.checkout-progress--step:hover::before {
+  transform: scale(1.05);
+}
+
+
+// Order summary page styling
+.path-checkout #main {
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+.layout-checkout-form {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 35px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.06);
+  border: 1px solid #ececec;
+}
+
+.layout-checkout-form .col-sm-6:first-child {
+  padding-right: 30px;
+}
+
+.layout-checkout-form .col-sm-6:last-child {
+  padding-left: 30px;
+}
+
+.checkout-pane legend,
+.layout-checkout-form h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1b1464;
+  margin-bottom: 22px;
+  border: 0;
+}
+
+.checkout-pane {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.form-item label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.checkout-order-summary {
+  background: #fafbff;
+  border: 1px solid #e8eaf3;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.checkout-order-summary table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.checkout-order-summary tr {
+  border-bottom: 1px solid #eceff5;
+}
+
+.checkout-order-summary td {
+  padding: 14px 0;
+  vertical-align: top;
+  font-size: 15px;
+}
+
+.checkout-order-summary td:last-child {
+  text-align: right;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.order-total-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  font-size: 15px;
+}
+
+.order-total-line__subtotal {
+  margin-top: 18px;
+}
+
+.order-total-line__total {
+  margin-top: 8px;
+  padding-top: 18px;
+  border-top: 2px solid #dfe3ee;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1b1464;
+}
+
+// Merged from duplicate definition further down
+.layout-region-checkout-footer {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 35px;
+}
+
+// Merged from duplicate definition further down
+.form-actions .btn-primary {
+  min-width: 260px;
+  background: #1b1464;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 18px rgba(27, 20, 100, 0.18);
+}
+
+.form-actions .btn-primary:hover {
+  background: #140d52;
+  transform: translateY(-1px);
+}
+
+
+// Payment review step page styling
+.layout-checkout-form fieldset {
+  background: #fafbff;
+  border: 1px solid #e8ebf3;
+  border-radius: 16px;
+  padding: 22px 24px;
+  margin-bottom: 18px;
+  transition: all 0.2s ease;
+}
+
+.layout-checkout-form fieldset:hover {
+  border-color: #d8ddee;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+}
+
+.layout-checkout-form legend {
+  margin-bottom: 10px;
+}
+
+.layout-checkout-form .fieldset-legend {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1b1464;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.layout-checkout-form .fieldset-wrapper {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.7;
+  padding-top: 6px;
+}
+
+.checkout-review-edit-link a {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(27, 20, 100, 0.08);
+  color: #1b1464;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.checkout-review-edit-link a:hover {
+  background: #1b1464;
+  color: #ffffff;
+}
+
+#edit-review-payment-information .fieldset-wrapper {
+  font-weight: 600;
+}
+
+.link--previous {
+  color: #1b1464;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.link--previous:hover {
+  opacity: 0.7;
+  text-decoration: underline;
+}
+
+
+// Responsive — merged two separate @media blocks into one
+@media (max-width: 768px) {
+  .checkout-progress {
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .checkout-progress--step {
+    font-size: 13px;
+  }
+
+  .checkout-progress--step::before {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .checkout-progress--step:not(:last-child)::after {
+    width: 24px;
+    margin-left: 8px;
+  }
+
+  .layout-checkout-form {
+    padding: 22px;
+  }
+
+  .layout-checkout-form .col-sm-6:first-child,
+  .layout-checkout-form .col-sm-6:last-child {
+    padding: 0;
+  }
+
+  .checkout-order-summary {
+    margin-top: 25px;
+  }
+
+  .layout-checkout-form h3,
+  .checkout-pane legend {
+    font-size: 1.5rem;
+  }
+
+  .layout-region-checkout-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form-actions .btn-primary {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .link--previous {
+    text-align: center;
+  }
+}

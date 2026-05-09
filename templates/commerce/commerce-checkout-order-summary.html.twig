@@ -1,0 +1,46 @@
+{#
+/**
+ * @file
+ * Theme override for the checkout order summary.
+ *
+ * For ad plan items that have a field_ad_node reference, the order item's
+ * overridden title (e.g. "Standard 1 Month — Ad Title") is used instead of
+ * the default purchased-entity summary render, so the ad title is visible
+ * in the order summary during checkout.
+ *
+ * Available variables:
+ * - order_entity: The order entity.
+ * - checkout_step: The current checkout step.
+ * - totals: An array of order total values.
+ * - rendered_totals: The rendered order totals.
+ */
+#}
+<div{{ attributes.addClass('checkout-order-summary') }}>
+  {% block order_items %}
+    <table>
+      <tbody>
+      {% for order_item in order_entity.getItems %}
+        <tr>
+          <td>{{ order_item.getQuantity|number_format }}&nbsp;x</td>
+          <td>
+            {# For ad plan items use the overridden order item title so the
+               ad node title is visible. Fallback to the default entity render
+               for all other product types. #}
+            {% if order_item.hasField('field_ad_node') and not order_item.get('field_ad_node').isEmpty %}
+              {{- order_item.label -}}
+            {% elseif order_item.hasPurchasedEntity %}
+              {{ order_item.getPurchasedEntity|commerce_entity_render('summary') }}
+            {% else %}
+              {{- order_item.label -}}
+            {% endif %}
+          </td>
+          <td>{{- order_item.getTotalPrice|commerce_price_format -}}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  {% endblock %}
+  {% block totals %}
+    {{ rendered_totals }}
+  {% endblock %}
+</div>
