@@ -14251,6 +14251,7 @@ body.path-user .field--label-above .field__item {
   display: flex;
   align-items: center;
   gap: 18px;
+  float: none !important;
   margin-top: 35px;
 }
 
@@ -14382,6 +14383,57 @@ body.path-user .field--label-above .field__item {
     text-align: center;
   }
 }
+.kasada-dashboard {
+  max-width: 1400px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.kasada-dashboard__header {
+  margin-bottom: 40px;
+}
+
+.kasada-dashboard__header h1, .kasada-dashboard__header .h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #1b1464;
+}
+
+.kasada-dashboard__header p {
+  font-size: 16px;
+  color: #6b7280;
+}
+
+.kasada-dashboard__grid {
+  display: grid;
+  gap: 24px;
+}
+
+.kasada-dashboard__card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.kasada-dashboard__card-header {
+  padding: 20px 24px;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.kasada-dashboard__card-header h2, .kasada-dashboard__card-header .h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.kasada-dashboard__card-content {
+  padding: 24px;
+}
+
 /* GENERAL STYLES 
 -------------------------------------------------*/
 body {

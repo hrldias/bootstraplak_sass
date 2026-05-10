@@ -174,15 +174,14 @@
   color: #1b1464;
 }
 
-// Merged from duplicate definition further down
 .layout-region-checkout-footer {
   display: flex;
   align-items: center;
   gap: 18px;
+  float: none !important;
   margin-top: 35px;
 }
 
-// Merged from duplicate definition further down
 .layout-region-checkout-footer .btn-primary {
   min-width: 260px;
   background: #1b1464;
@@ -202,6 +201,7 @@
 
 
 // Payment review step page styling
+
 .layout-checkout-form fieldset {
   background: #fafbff;
   border: 1px solid #e8ebf3;
