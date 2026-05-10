@@ -14434,6 +14434,25 @@ body.path-user .field--label-above .field__item {
   padding: 24px;
 }
 
+.kasada-profile-status {
+  color: white;
+  padding: 3px 12px 4px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.kasada-profile-status--verified {
+  background-color: green;
+}
+
+.kasada-profile-status--rejected {
+  background-color: #d14813;
+}
+
+.kasada-profile-status--under_review {
+  background-color: #ffb300;
+}
+
 /* GENERAL STYLES 
 -------------------------------------------------*/
 body {
