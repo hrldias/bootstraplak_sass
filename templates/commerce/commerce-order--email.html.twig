@@ -1,0 +1,194 @@
+{#
+/**
+ * @file
+ * Custom styled order receipt for kasada.lk
+ */
+#}
+<div style="margin:0; padding:20px; background-color:#f5f7fb; font-family:Arial, Helvetica, sans-serif; color:#333333;">
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td align="center">
+        <table role="presentation" width="600" cellspacing="0" cellpadding="0" border="0"
+               style="max-width:600px; width:100%; background-color:#ffffff; border:1px solid #e5e7eb;">
+
+          <!-- Header -->
+          <tr>
+            <td align="center" style="background-color:rgb(27,20,100); padding:35px 25px;">
+              <img src="https://kasada.lk/sites/default/files/kasada-logo-white.png"
+                   alt="{{ order_entity.getStore.label }}"
+                   width="180"
+                   style="display:block; width:180px; max-width:180px; height:auto; margin-bottom:15px; border:0;">
+              <h1 style="margin:0; color:#ffffff; font-size:28px; font-weight:bold;">
+                {{ 'Order Confirmation'|t }}
+              </h1>
+              <p style="margin:12px 0 0 0; color:#d6d8ff; font-size:15px; line-height:1.5;">
+                {{ 'Thank you for your purchase'|t }}
+              </p>
+            </td>
+          </tr>
+
+          <!-- Body -->
+          <tr>
+            <td style="padding:35px 30px;">
+
+              <p style="margin-top:0; font-size:16px; line-height:1.7;">
+                {{ 'Hello,'|t }}
+              </p>
+
+              <p style="font-size:15px; line-height:1.8; margin:20px 0;">
+                {{ 'We have successfully received your order on'|t }}
+                <a href="{{ url('<front>') }}"
+                   style="color:rgb(27,20,100); text-decoration:none; font-weight:bold;">
+                  {{ order_entity.getStore.label }}
+                </a>.
+              </p>
+
+              <!-- Order Box -->
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
+                     style="background-color:#f8f9ff; border-left:4px solid rgb(27,20,100); margin:30px 0;">
+                <tr>
+                  <td style="padding:18px;">
+                    <p style="margin:0 0 10px 0; font-size:14px;">
+                      <strong>{{ 'Order Number:'|t }}</strong> #{{ order_entity.getOrderNumber }}
+                    </p>
+                    {% if order_entity.getPlacedTime %}
+                    <p style="margin:0 0 10px 0; font-size:14px;">
+                      <strong>{{ 'Order Date:'|t }}</strong> {{ order_entity.getPlacedTime|format_date('short') }}
+                    </p>
+                    {% endif %}
+                    <p style="margin:0; font-size:14px;">
+                      <strong>{{ 'Status:'|t }}</strong> {{ order_entity.getState.getLabel }}
+                    </p>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Order Items -->
+              {% block order_items %}
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
+                     style="border-collapse:collapse; margin-bottom:20px;">
+                <thead>
+                  <tr style="border-bottom:2px solid #e5e7eb;">
+                    <th style="text-align:left; padding:10px 8px; font-size:13px; color:#555;">{{ 'Item'|t }}</th>
+                    <th style="text-align:center; padding:10px 8px; font-size:13px; color:#555;">{{ 'Qty'|t }}</th>
+                    <th style="text-align:right; padding:10px 8px; font-size:13px; color:#555;">{{ 'Price'|t }}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for order_item in order_entity.getItems %}
+                  <tr style="border-bottom:1px solid #f0f0f0;">
+                    <td style="padding:12px 8px; font-size:14px;">{{ order_item.label }}</td>
+                    <td style="padding:12px 8px; font-size:14px; text-align:center;">
+                      {{ order_item.getQuantity|number_format }}
+                    </td>
+                    <td style="padding:12px 8px; font-size:14px; text-align:right;">
+                      {{ order_item.getTotalPrice|commerce_price_format }}
+                    </td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+              {% endblock %}
+
+              <!-- Shipping / Billing -->
+              {% if billing_information or shipping_information %}
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
+                     style="margin-bottom:20px; border-top:1px solid #e5e7eb; padding-top:20px;">
+                <tr style="vertical-align:top;">
+                  {% if shipping_information %}
+                  <td style="padding:15px 8px 5px 0; font-size:14px; width:50%;">
+                    <strong style="display:block; margin-bottom:8px;">{{ 'Shipping Information'|t }}</strong>
+                    {% block shipping_information %}{{ shipping_information }}{% endblock %}
+                  </td>
+                  {% endif %}
+                  {% if billing_information %}
+                  <td style="padding:15px 0 5px 8px; font-size:14px; width:50%;">
+                    <strong style="display:block; margin-bottom:8px;">{{ 'Billing Information'|t }}</strong>
+                    {% block billing_information %}{{ billing_information }}{% endblock %}
+                  </td>
+                  {% endif %}
+                </tr>
+                {% if payment_method %}
+                <tr>
+                  <td style="padding:10px 8px 5px; font-size:14px;">
+                    <strong>{{ 'Payment Method'|t }}</strong><br>
+                    {% block payment_method %}{{ payment_method }}{% endblock %}
+                  </td>
+                </tr>
+                {% endif %}
+              </table>
+              {% endif %}
+
+              <!-- Totals -->
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
+                     style="border-top:1px solid #e5e7eb;">
+                <tr>
+                  <td style="padding:10px 8px; font-size:14px; color:#555;">{{ 'Subtotal'|t }}</td>
+                  <td style="padding:10px 8px; font-size:14px; text-align:right;">
+                    {{ totals.subtotal|commerce_price_format }}
+                  </td>
+                </tr>
+                {% for adjustment in totals.adjustments %}
+                <tr>
+                  <td style="padding:5px 8px; font-size:14px; color:#555;">{{ adjustment.label }}</td>
+                  <td style="padding:5px 8px; font-size:14px; text-align:right;">
+                    {{ adjustment.total|commerce_price_format }}
+                  </td>
+                </tr>
+                {% endfor %}
+                <tr style="border-top:2px solid rgb(27,20,100);">
+                  <td style="padding:14px 8px; font-size:17px; font-weight:bold; color:rgb(27,20,100);">
+                    {{ 'Total'|t }}
+                  </td>
+                  <td style="padding:14px 8px; font-size:17px; font-weight:bold; color:rgb(27,20,100); text-align:right;">
+                    {{ order_entity.getTotalPrice|commerce_price_format }}
+                  </td>
+                </tr>
+              </table>
+
+              {% if order_entity.getCustomerComments %}
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
+                     style="margin-top:20px; border-top:1px solid #e5e7eb;">
+                <tr>
+                  <td style="padding:15px 8px 5px; font-size:14px;">
+                    <strong>{{ 'Customer Comments'|t }}</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding:5px 8px; font-size:14px;">
+                    {{ order_entity.getCustomerComments|raw }}
+                  </td>
+                </tr>
+              </table>
+              {% endif %}
+
+              <p style="margin-top:30px; font-size:15px; line-height:1.8;">
+                {{ 'If you selected a manual payment method, our team will review and confirm your payment shortly.'|t }}
+              </p>
+              <p style="font-size:14px; line-height:1.8; color:#666666;">
+                {% block additional_information %}
+                  {{ 'Need help? Please contact the support team.'|t }}
+                {% endblock %}
+              </p>
+
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td align="center" style="background-color:#f3f4f6; padding:25px; border-top:1px solid #e5e7eb;">
+              <p style="margin:0; font-size:14px; color:#555555; line-height:1.7;">
+                {{ 'Thank you,'|t }}<br>
+                <strong>{{ 'The'|t }} {{ order_entity.getStore.label }} {{ 'Team'|t }}</strong>
+              </p>
+              <p style="margin:15px 0 0 0; font-size:12px; color:#888888;">
+                © {{ 'now'|date('Y') }} {{ order_entity.getStore.label }}. {{ 'All rights reserved.'|t }}
+              </p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+</div>
