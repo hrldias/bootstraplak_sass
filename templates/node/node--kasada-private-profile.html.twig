@@ -5,10 +5,9 @@
   {# ===== PROFILE STATUS (owner only) ===== #}
   {% if profile_status_label %}
     {% set status_classes = {
-      'pending_verification': 'warning',
+      'under_review': 'warning',
       'verified': 'success',
       'rejected': 'danger',
-      'suspended': 'secondary',
     } %}
     <div class="mb-3 text-end">
       <strong>{{ 'Profile Status'|t }}:</strong> <span class="badge bg-{{ status_classes[profile_status_key] ?? 'secondary' }} fs-6">{{ profile_status_label }}</span>
